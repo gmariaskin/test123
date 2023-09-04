@@ -10,7 +10,7 @@ import UIKit
 //    init
 //    loadView
 //    viewDidLoad
-
+//    viewWillAppear
 class MainViewController: UIViewController {
     
     private var mainView: MainView
