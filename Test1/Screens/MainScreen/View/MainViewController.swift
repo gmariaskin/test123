@@ -39,13 +39,7 @@ class MainViewController: UIViewController {
     }
     
     private func initViewController() {
-        if state == .success {
-            print("✅", state)
-        } else if state == .fail {
-            print("❌", state)
-        } else {
-            print("unknown - ",state)
-        }
+
     }
 }
 
