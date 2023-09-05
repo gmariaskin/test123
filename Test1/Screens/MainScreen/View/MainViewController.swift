@@ -44,6 +44,7 @@ class MainViewController: UIViewController {
     }
 }
 
+//MARK: - Action(s)
 extension MainViewController {
     
     @objc private func goToSecondVCGray() {
