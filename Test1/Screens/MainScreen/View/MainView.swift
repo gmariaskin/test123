@@ -7,7 +7,7 @@
 
 import UIKit
 import SnapKit
-
+//FIXME: - SnapKit достаточно импортировать в 1 месте в проекте
 class MainView: UIView {
     
     let button1: UIButton = {
@@ -54,9 +54,9 @@ class MainView: UIView {
             make.top.equalToSuperview().offset(100)
         }
         
-        
+//        FIXME: - лишнее место
     }
-    
+//    FIXME: - если функция не должна вызываться из вне, то мы делаем ее private
     func configure(with state: MainScreenModel) {
         
         switch state {

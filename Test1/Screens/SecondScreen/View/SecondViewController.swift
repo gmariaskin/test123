@@ -13,6 +13,12 @@ class SecondViewController: UIViewController {
     private var state: SecondScreenModel
     
     init(secondView: SecondView, state: SecondScreenModel) {
+/**
+ init(state:state ) {
+ self.secondView = SecondView(state: state)
+ super.init(nibName: nil, bundle: nil)
+ }
+ */
         self.secondView = secondView
         self.state = state
         super.init(nibName: nil, bundle: nil)
@@ -29,11 +35,11 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//FIXME: - не оставляем пустое место в функциях
        
     }
     
-
+    //FIXME: - не оставляем пустое место в контроллере
   
 
 }
