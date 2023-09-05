@@ -92,9 +92,9 @@
 		178C6FFE2AA5E8D80038FA24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				178C70042AA5EA3B0038FA24 /* MainScreen */,
 				F7A8FA0D2AA669FE00933335 /* SecondScreen */,
 				178C70032AA5EA210038FA24 /* LaunchScreen */,
-				178C70042AA5EA3B0038FA24 /* MainScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

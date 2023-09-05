@@ -7,9 +7,7 @@
 
 import Foundation
 
-//FIXME: - большой промежуток 
 enum SecondScreenModel {
-    
     case gray
     case orange
 }
