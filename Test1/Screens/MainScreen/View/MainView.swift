@@ -6,17 +6,24 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainView: UIView {
     
-    let button: UIButton = {
-        let obj = UIButton()
-        obj.backgroundColor = .blue
-        return obj
+    let button1: UIButton = {
+        let button1 = UIButton()
+        button1.backgroundColor = .gray
+        button1.setTitle("Go gray", for: .normal)
+        return button1
     }()
     
-    let view1 = UIView()
-
+    let button2: UIButton = {
+        let button2 = UIButton()
+        button2.backgroundColor = .orange
+        button2.setTitle("Go orange", for: .normal)
+        return button2
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -25,6 +32,7 @@ class MainView: UIView {
     init(state: MainScreenModel, frame: CGRect = .zero) {
         super.init(frame: frame)
         configure(with: state)
+        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -33,18 +41,24 @@ class MainView: UIView {
     
     private func setup() {
         
-        addSubview(button)
-        addSubview(view1)
+        addSubview(button1)
+        addSubview(button2)
         
-//        snp constraints
-        ///
+        button1.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(100)
+        }
+        
+        button2.snp.makeConstraints { make in
+            make.trailing.equalToSuperview()
+            make.top.equalToSuperview().offset(100)
+        }
+        
+        
     }
     
     func configure(with state: MainScreenModel) {
-//        1
-//        backgroundColor = state == .success ? .green : .systemRed
-
-//        2
+        
         switch state {
         case .success:
             backgroundColor = .green
@@ -53,12 +67,5 @@ class MainView: UIView {
         case .unknown:
             backgroundColor = .systemPink
         }
-//
-////        3
-//        if state {
-//            backgroundColor = .green
-//        } else {
-//            backgroundColor = .systemRed
-//        }
     }
 }

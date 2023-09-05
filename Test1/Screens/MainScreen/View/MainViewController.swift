@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     
     private var mainView: MainView
     private var state: MainScreenModel
+   
     
     //    MARK: - Function(s)
     init(state: MainScreenModel) {
@@ -32,14 +33,26 @@ class MainViewController: UIViewController {
         view = mainView
     }
     
-//             cmd + control + space
     override func viewDidLoad() {
         super.viewDidLoad()
        initViewController()
     }
     
     private func initViewController() {
-
+        mainView.button1.addTarget(self, action: #selector(goToSecondVCGray), for: .touchUpInside)
+        mainView.button2.addTarget(self, action: #selector(goToSecondVCOrange), for: .touchUpInside)
     }
+    
+     @objc func goToSecondVCGray() {
+         let secondView = SecondView(state: .gray)
+         let secondVC = SecondViewController(secondView: secondView, state: .gray)
+         self.navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
+    @objc func goToSecondVCOrange() {
+        let secondView = SecondView(state: .orange)
+        let secondVC = SecondViewController(secondView: secondView, state: .orange)
+        self.navigationController?.pushViewController(secondVC, animated: true)
+   }
 }
 
