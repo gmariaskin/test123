@@ -24,6 +24,7 @@ class MainView: UIView {
         return button2
     }()
     
+    //MARK: - Function(s)
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()

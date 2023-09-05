@@ -9,6 +9,7 @@ import UIKit
 
 class SecondView: UIView {
     
+    //MARK: - Function(s)
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

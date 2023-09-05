@@ -12,6 +12,7 @@ class SecondViewController: UIViewController {
     private var secondView: SecondView
     private var state: SecondScreenModel
     
+    //MARK: - Function(s)
     init(state: SecondScreenModel) {
         self.secondView = SecondView(state: state)
         self.state = state

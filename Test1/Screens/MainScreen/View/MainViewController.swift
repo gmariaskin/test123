@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     private var mainView: MainView
     private var state: MainScreenModel
     
+    //MARK: - Function(s)
     init(state: MainScreenModel) {
         self.mainView = MainView(state: state)
         self.state = state
