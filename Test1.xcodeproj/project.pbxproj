@@ -14,6 +14,13 @@
 		178C6FF62AA5E7700038FA24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178C6FF42AA5E7700038FA24 /* LaunchScreen.storyboard */; };
 		178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C70062AA5EA4D0038FA24 /* MainView.swift */; };
 		178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C700A2AA5F4250038FA24 /* MainScreenModel.swift */; };
+		17A322242AAB0F7500A155D6 /* TableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322232AAB0F7500A155D6 /* TableViewScreen.swift */; };
+		17A322272AAB0FF800A155D6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322262AAB0FF800A155D6 /* CustomCell.swift */; };
+		17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322292AAB1EBD00A155D6 /* PersonModel.swift */; };
+		17A322302AAB2AF700A155D6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3222F2AAB2AF700A155D6 /* CollectionViewController.swift */; };
+		17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322322AAB33FA00A155D6 /* CustomCollectionViewCell.swift */; };
+		17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322342AAB349F00A155D6 /* MyCollectionView.swift */; };
+		17A322372AAB355600A155D6 /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322362AAB355600A155D6 /* MyTableView.swift */; };
 		C3249B0A3CBD6D5FDF79032F /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
@@ -31,6 +38,13 @@
 		178C6FF72AA5E7700038FA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178C70062AA5EA4D0038FA24 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		178C700A2AA5F4250038FA24 /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		17A322232AAB0F7500A155D6 /* TableViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewScreen.swift; sourceTree = "<group>"; };
+		17A322262AAB0FF800A155D6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		17A322292AAB1EBD00A155D6 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		17A3222F2AAB2AF700A155D6 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		17A322322AAB33FA00A155D6 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		17A322342AAB349F00A155D6 /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
+		17A322362AAB355600A155D6 /* MyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
 		389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E8619F604E83CC1AA72494 /* Pods-Test1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.debug.xcconfig"; path = "Target Support Files/Pods-Test1/Pods-Test1.debug.xcconfig"; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +106,8 @@
 		178C6FFE2AA5E8D80038FA24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				17A3222D2AAB2AC200A155D6 /* CollectionScreen */,
+				17A322212AAB0F6400A155D6 /* TableViewScreen */,
 				178C70042AA5EA3B0038FA24 /* MainScreen */,
 				F7A8FA0D2AA669FE00933335 /* SecondScreen */,
 				178C70032AA5EA210038FA24 /* LaunchScreen */,
@@ -111,6 +127,7 @@
 		178C70002AA5E9590038FA24 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				17A3222B2AAB250A00A155D6 /* CustomViews */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -170,6 +187,74 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		17A322212AAB0F6400A155D6 /* TableViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				17A322282AAB1EB300A155D6 /* Model */,
+				17A322222AAB0F6A00A155D6 /* View */,
+			);
+			path = TableViewScreen;
+			sourceTree = "<group>";
+		};
+		17A322222AAB0F6A00A155D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17A322232AAB0F7500A155D6 /* TableViewScreen.swift */,
+				17A322362AAB355600A155D6 /* MyTableView.swift */,
+				17A322252AAB0FF200A155D6 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17A322252AAB0FF200A155D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				17A322262AAB0FF800A155D6 /* CustomCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		17A322282AAB1EB300A155D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17A322292AAB1EBD00A155D6 /* PersonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17A3222B2AAB250A00A155D6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		17A3222D2AAB2AC200A155D6 /* CollectionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				17A3222E2AAB2ACB00A155D6 /* View */,
+			);
+			path = CollectionScreen;
+			sourceTree = "<group>";
+		};
+		17A3222E2AAB2ACB00A155D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17A3222F2AAB2AF700A155D6 /* CollectionViewController.swift */,
+				17A322342AAB349F00A155D6 /* MyCollectionView.swift */,
+				17A322312AAB33B700A155D6 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17A322312AAB33B700A155D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				17A322322AAB33FA00A155D6 /* CustomCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CC7FA20BF1C0D926DC86DFB2 /* Frameworks */ = {
@@ -329,13 +414,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A322302AAB2AF700A155D6 /* CollectionViewController.swift in Sources */,
 				F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */,
 				F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */,
+				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
+				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
+				17A322272AAB0FF800A155D6 /* CustomCell.swift in Sources */,
+				17A322372AAB355600A155D6 /* MyTableView.swift in Sources */,
 				178C6FEE2AA5E76F0038FA24 /* MainViewController.swift in Sources */,
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
 				178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */,
 				178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */,
+				17A322242AAB0F7500A155D6 /* TableViewScreen.swift in Sources */,
+				17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */,
 				F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

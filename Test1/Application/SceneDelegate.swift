@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let purchase: MainScreenModel = .success
         let vc = MainViewController(state: purchase)
-        let navigation = UINavigationController(rootViewController: vc)
+        let navigation = UINavigationController(rootViewController: CollectionViewController())
+        navigation.navigationBar.barTintColor = .cyan
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
