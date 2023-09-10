@@ -67,10 +67,10 @@ class NewCell: UICollectionViewCell {
         }
     }
     
-    func configure(image: UIImage, name: String, description: String) {
-        self.elementDescriptionLabel.text = description
-        self.elementNameLabel.text = name
-        self.image.image = image
+    func configure(with item: CollectionModel) {
+        self.elementDescriptionLabel.text = item.description
+        self.elementNameLabel.text = item.name
+        self.image.image = item.image
         if self.elementDescriptionLabel.text == "Needs permissions" {
             self.elementDescriptionLabel.textColor = .red
         } else {
