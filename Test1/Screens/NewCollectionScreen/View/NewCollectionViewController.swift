@@ -54,13 +54,13 @@ extension NewCollectionViewController: UICollectionViewDataSource {
         
         switch isPremium {
         case true :
-            cell.configure(image: item.image!, name: item.name!, description: item.description!)
+            cell.configure(with: item)
         case false:
             if item.premium {
                 item.description! = "Needs permissions"
-                cell.configure(image: item.image!, name: item.name!, description: item.description!)
+                cell.configure(with: item)
             } else {
-                cell.configure(image: item.image!, name: item.name!, description: item.description!)
+                cell.configure(with: item)
             }
         }
         return cell
