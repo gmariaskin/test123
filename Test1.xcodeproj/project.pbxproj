@@ -22,6 +22,10 @@
 		17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322342AAB349F00A155D6 /* MyCollectionView.swift */; };
 		17A322372AAB355600A155D6 /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322362AAB355600A155D6 /* MyTableView.swift */; };
 		C3249B0A3CBD6D5FDF79032F /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */; };
+		F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0E92AAE04E5009F3D09 /* CollectionViewModel.swift */; };
+		F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */; };
+		F785A0EE2AAE07C4009F3D09 /* NewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */; };
+		F785A0F12AAE0821009F3D09 /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0F02AAE0821009F3D09 /* NewCell.swift */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
@@ -47,6 +51,10 @@
 		17A322362AAB355600A155D6 /* MyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
 		389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E8619F604E83CC1AA72494 /* Pods-Test1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.debug.xcconfig"; path = "Target Support Files/Pods-Test1/Pods-Test1.debug.xcconfig"; sourceTree = "<group>"; };
+		F785A0E92AAE04E5009F3D09 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionView.swift; sourceTree = "<group>"; };
+		F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionViewController.swift; sourceTree = "<group>"; };
+		F785A0F02AAE0821009F3D09 /* NewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCell.swift; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 		178C6FFE2AA5E8D80038FA24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F785A0E62AAE028B009F3D09 /* NewCollectionScreen */,
 				17A3222D2AAB2AC200A155D6 /* CollectionScreen */,
 				17A322212AAB0F6400A155D6 /* TableViewScreen */,
 				178C70042AA5EA3B0038FA24 /* MainScreen */,
@@ -274,6 +283,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F785A0E62AAE028B009F3D09 /* NewCollectionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F785A0E82AAE04CD009F3D09 /* Model */,
+				F785A0E72AAE029A009F3D09 /* View */,
+			);
+			path = NewCollectionScreen;
+			sourceTree = "<group>";
+		};
+		F785A0E72AAE029A009F3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */,
+				F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */,
+				F785A0F22AAE0831009F3D09 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F785A0E82AAE04CD009F3D09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F785A0E92AAE04E5009F3D09 /* CollectionViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F785A0F22AAE0831009F3D09 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F785A0F02AAE0821009F3D09 /* NewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F7A8FA0D2AA669FE00933335 /* SecondScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,15 +461,19 @@
 				17A322302AAB2AF700A155D6 /* CollectionViewController.swift in Sources */,
 				F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */,
 				F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */,
+				F785A0EE2AAE07C4009F3D09 /* NewCollectionViewController.swift in Sources */,
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
 				17A322272AAB0FF800A155D6 /* CustomCell.swift in Sources */,
+				F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */,
 				17A322372AAB355600A155D6 /* MyTableView.swift in Sources */,
+				F785A0F12AAE0821009F3D09 /* NewCell.swift in Sources */,
 				178C6FEE2AA5E76F0038FA24 /* MainViewController.swift in Sources */,
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
 				178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */,
 				178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */,
+				F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */,
 				17A322242AAB0F7500A155D6 /* TableViewScreen.swift in Sources */,
 				17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */,
 				F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */,
