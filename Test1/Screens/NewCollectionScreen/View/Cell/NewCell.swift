@@ -38,6 +38,9 @@ class NewCell: UICollectionViewCell {
     
     private func setup() {
         
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 20
+        
         addSubview(image)
         addSubview(elementNameLabel)
         addSubview(elementDescriptionLabel)
@@ -49,10 +52,12 @@ class NewCell: UICollectionViewCell {
         elementDescriptionLabel.textColor = .gray
         elementDescriptionLabel.textAlignment = .left
         elementDescriptionLabel.numberOfLines = 1
+        elementDescriptionLabel.adjustsFontSizeToFitWidth = true
         
         image.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
             make.edges.equalToSuperview().multipliedBy(0.6)
+            make.width.height.equalToSuperview().multipliedBy(0.5)
         }
         
         elementNameLabel.snp.makeConstraints { make in
@@ -63,18 +68,20 @@ class NewCell: UICollectionViewCell {
         
         elementDescriptionLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
+            make.bottom.equalToSuperview().inset(20)
             make.width.equalToSuperview().multipliedBy(0.8)
         }
     }
     
     func configure(with item: CollectionModel) {
+        
         self.elementDescriptionLabel.text = item.description
         self.elementNameLabel.text = item.name
         self.image.image = item.image
         if self.elementDescriptionLabel.text == "Needs permissions" {
             self.elementDescriptionLabel.textColor = .red
         } else {
-            self.elementDescriptionLabel.textColor = .black
+            self.elementDescriptionLabel.textColor = .gray
         }
     }
 }

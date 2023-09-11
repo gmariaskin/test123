@@ -15,7 +15,7 @@ class NewCollectionViewController: UIViewController {
     init(isPremium: Bool) {
         self.isPremium = isPremium
         super.init(nibName: nil, bundle: nil)
-        view = mainView
+       
     }
     
     required init?(coder: NSCoder) {
@@ -23,7 +23,7 @@ class NewCollectionViewController: UIViewController {
     }
     
     override func loadView() {
-        
+        view = mainView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +73,36 @@ extension NewCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let item = collectionModelArray![indexPath.row]
-        if item.premium == false {
-            print("Access denied")
+        if !isPremium && item.premium == true {
+            print("❌ Access denied")
         } else {
-            print ("Button Tapped")
+            print ("✅ Button Tapped")
         }
+    }
+}
+
+//MARK: - UICollectionViewDelegateFlowLayout
+
+extension NewCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let itemsPerRow: CGFloat = 2
+        let paddingWidth = 10 * (itemsPerRow + 1)
+        let availableWidth = collectionView.frame.width - paddingWidth
+        let widthPerItem = availableWidth / itemsPerRow
+       return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
 }
