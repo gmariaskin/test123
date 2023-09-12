@@ -10,12 +10,10 @@ import UIKit
 class NewTableViewViewController: UIViewController {
     
     //MARK: - Properties
-    
     var state: Premium
     var mainView: NewTableView
     
     //MARK: - Lifecycle
-    
     init(state: Premium) {
         self.mainView = NewTableView()
         self.state = state
@@ -46,7 +44,6 @@ class NewTableViewViewController: UIViewController {
         mainView.tableView.register(NewTableViewCell.self, forCellReuseIdentifier: NewTableViewCell.id)
         mainView.tableView.register(HeaderView.self, forHeaderFooterViewReuseIdentifier: HeaderView.id)
     }
-    
 }
 
 //MARK: - UITableViewDelegate
@@ -60,24 +57,37 @@ extension NewTableViewViewController: UITableViewDelegate {
 extension NewTableViewViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return state == .notPremium ? 2 : 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return countries.count
+        if state == .notPremium {
+            if section == 0 {
+                return countries.filter { $0.premium == false }.count
+            } else {
+                return countries.filter { $0.premium == true }.count
+            }
         } else {
-            return premiumCountries.count
+            return countries.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NewTableViewCell.id, for: indexPath) as? NewTableViewCell else { return UITableViewCell() }
-        
-        if indexPath.section == 0 {
-            cell.configure(with: countries[indexPath.row])
+        let country: Country
+        if state == .notPremium {
+            if indexPath.section == 0 {
+                let filteredCountries = countries.filter { $0.premium == false }
+                country = filteredCountries[indexPath.row]
+                cell.configure(with: country)
+            } else {
+                let filteredCountries = countries.filter { $0.premium == true }
+                country = filteredCountries[indexPath.row]
+                cell.configure(with: country)
+            }
         } else {
-            cell.configure(with: premiumCountries[indexPath.row])
+            country = countries[indexPath.row]
+            cell.configure(with: country)
         }
         
         return cell

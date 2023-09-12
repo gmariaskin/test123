@@ -14,6 +14,7 @@ class NewTableView: UIView {
     var tableView: UITableView = {
         let obj = UITableView(frame: .zero, style: .insetGrouped)
         obj.rowHeight = 100
+        obj.backgroundColor = .darkGray
         return obj
     }()
     
@@ -29,16 +30,11 @@ class NewTableView: UIView {
     }
     
 //MARK: - Actions
-    
     private func setup() {
-
         addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
-        tableView.backgroundColor = .darkGray
-        
     }
 }

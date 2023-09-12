@@ -332,7 +332,6 @@
 		F785A0F62AAF5468009F3D09 /* NewTableViewScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F785A0FD2AAF54B1009F3D09 /* Cell */,
 				F785A0F82AAF5481009F3D09 /* Model */,
 				F785A0F72AAF547C009F3D09 /* View */,
 			);
@@ -342,8 +341,9 @@
 		F785A0F72AAF547C009F3D09 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F785A0FB2AAF54AC009F3D09 /* NewTableView.swift */,
 				F785A0F92AAF5498009F3D09 /* NewTableViewViewController.swift */,
+				F785A0FB2AAF54AC009F3D09 /* NewTableView.swift */,
+				F785A0FD2AAF54B1009F3D09 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -32,17 +32,13 @@ enum Signal {
     case strong
     case noSignal
 }
-
+//TODO: Массивы общедоступные во всем проекте, найти лучшее решение
 let countries: [Country] = [
     
     Country(premium: false, emoji: UIImage(named: "france"), countryName: "France", signal: .strong, delay: 28),
     Country(premium: false, emoji: UIImage(named: "kazakhstan"), countryName: "Kazakhstan", signal: .strong, delay: 23),
     Country(premium: false, emoji: UIImage(named: "poland"), countryName: "Poland", signal: .weak, delay: 124),
     Country(premium: false, emoji: UIImage(named: "ukraine"), countryName: "Ukraine", signal: .medium, delay: 58),
-]
-
-let premiumCountries: [Country] = [
-    
     Country(premium: true, emoji: UIImage(named: "germany"), countryName: "Germany", signal: .strong, delay: 21),
     Country(premium: true, emoji: UIImage(named: "italy"), countryName: "Italy", signal: .medium, delay: 47),
     Country(premium: true, emoji: UIImage(named: "netherlands"), countryName: "Netherlands", signal: .strong, delay: 33),
@@ -53,5 +49,3 @@ let premiumCountries: [Country] = [
     Country(premium: true, emoji: UIImage(named: "colombia"), countryName: "Colombia", signal: .weak, delay: 189),
     Country(premium: true, emoji: UIImage(named: "indonesia"), countryName: "Indonesia", signal: .noSignal, delay: 0)
 ]
-
-
