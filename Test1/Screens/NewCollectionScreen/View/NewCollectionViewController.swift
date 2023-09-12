@@ -15,7 +15,6 @@ class NewCollectionViewController: UIViewController {
     init(isPremium: Bool) {
         self.isPremium = isPremium
         super.init(nibName: nil, bundle: nil)
-       
     }
     
     required init?(coder: NSCoder) {
@@ -25,6 +24,7 @@ class NewCollectionViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewController()
@@ -42,7 +42,6 @@ class NewCollectionViewController: UIViewController {
 extension NewCollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return collectionModelArray!.count
     }
     

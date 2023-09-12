@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class CollectionViewController: UIViewController {
     private let mainView = MyCollectionView()
     
@@ -30,6 +28,7 @@ extension CollectionViewController: UICollectionViewDelegate {
         
     }
 }
+
 //MARK: - UICollectionViewDataSource
 extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -306,8 +306,8 @@
 		F785A0E72AAE029A009F3D09 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */,
 				F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */,
+				F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */,
 				F785A0F22AAE0831009F3D09 /* Cell */,
 			);
 			path = View;

@@ -38,5 +38,4 @@ class NewCollectionView: UIView {
             $0.top.equalTo(safeAreaLayoutGuide.snp.top)
         }
     }
-
 }

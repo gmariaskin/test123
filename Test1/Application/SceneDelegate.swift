@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let vc = NewTableViewViewController(state: .premium)
-        let navigation = UINavigationController(rootViewController: vc)
+        let navigation = UINavigationController(rootViewController: NewCollectionViewController(isPremium: true))
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
