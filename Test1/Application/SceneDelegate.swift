@@ -14,8 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let vc = NewTableViewViewController(state: .premium)
-        let navigation = UINavigationController(rootViewController: NewCollectionViewController(isPremium: true))
+        let vc = NewTableViewViewController(state: .notPremium)
+        let navigation = UINavigationController(rootViewController: vc)
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()

@@ -19,7 +19,7 @@ enum CheckButtonState {
 }
 
 struct Country {
-    let premium: Bool?
+    var premium: Bool?
     let emoji: UIImage?
     let countryName: String?
     let signal: Signal

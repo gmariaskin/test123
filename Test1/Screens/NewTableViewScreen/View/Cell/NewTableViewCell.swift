@@ -36,14 +36,14 @@ class NewTableViewCell: UITableViewCell {
         return obj
     }()
     
-    let checkButton: UIButton = {
-        let obj = UIButton()
+    let checkImage: UIImageView = {
+        let obj = UIImageView()
         return obj
     }()
     
     //MARK: - Actions
     
-    func configure(with country: Country) {
+    func configure(with country: Country, premiumStatus: Bool ) {
         
         let delay = country.delay
         self.delayLabel.text = "\(delay ?? 0) ms"
@@ -57,10 +57,10 @@ class NewTableViewCell: UITableViewCell {
         case .weak: self.signalImage.image = UIImage(named: "weakSignal")
         }
         
-        if country.premium == true {
-            self.checkButton.setImage(UIImage(named: "locked"), for: .normal)
+        if country.premium == true && premiumStatus == false {
+            self.checkImage.image = UIImage(named: "locked")
         } else {
-            self.checkButton.setImage(UIImage(named: "unchecked"), for: .normal)
+            self.checkImage.image = UIImage(named: "unchecked")
         }
         
         setupView()
@@ -74,13 +74,11 @@ class NewTableViewCell: UITableViewCell {
         addSubview(nameLabel)
         addSubview(signalImage)
         addSubview(delayLabel)
-        addSubview(checkButton)
+        addSubview(checkImage)
         
         delayLabel.font = .systemFont(ofSize: 12)
         
         self.selectionStyle = .none
-        
-        checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
         
         countryImage.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(50)
@@ -102,7 +100,7 @@ class NewTableViewCell: UITableViewCell {
             make.left.equalTo(signalImage.snp.right).offset(5)
         }
         
-        checkButton.snp.makeConstraints { make in
+        checkImage.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
             make.centerY.equalToSuperview()
         }
@@ -116,16 +114,5 @@ class NewTableViewCell: UITableViewCell {
         contentView.layer.cornerRadius = contentView.frame.height / 2
     }
     
-    @objc func checkButtonTapped(sender: UIButton) {
-        
-        if sender.imageView?.image == UIImage(named: "checked")  {
-            checkButton.setImage(UIImage(named: "unchecked"), for: .normal)
-            checkButtonState = .unchecked
-        } else if sender.imageView?.image == UIImage(named: "unchecked") {
-            checkButton.setImage(UIImage(named: "checked"), for: .normal)
-            checkButtonState = .checked
-        } else {
-            print ("🔒")
-        }
-    }
+
 }
