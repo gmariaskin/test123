@@ -52,10 +52,13 @@ class NewTableViewViewController: UIViewController {
 extension NewTableViewViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     
-        selectedRowIndex = indexPath.row
-        tableView.reloadData()
-        
+        if indexPath.row != selectedRowIndex{
+            selectedRowIndex = indexPath.row
+            tableView.reloadData()
+        } else {
+            selectedRowIndex = -1
+            tableView.reloadData()
+        }
     }
 }
 
