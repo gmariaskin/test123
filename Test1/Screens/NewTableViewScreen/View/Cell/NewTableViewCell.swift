@@ -13,6 +13,7 @@ class NewTableViewCell: UITableViewCell {
     
     static let id = String(describing: NewTableViewCell.self)
     public var checkButtonState: CheckButtonState = .unchecked
+   
     
     let countryImage: UIImageView = {
         let obj = UIImageView()

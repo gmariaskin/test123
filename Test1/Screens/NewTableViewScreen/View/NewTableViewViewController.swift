@@ -12,7 +12,7 @@ class NewTableViewViewController: UIViewController {
     //MARK: - Properties
     var state: Premium
     var mainView: NewTableView
-    var selectedCellsInSection: [Int: Int] = [:]
+    var selectedRowIndex: Int = -1
     
     //MARK: - Lifecycle
     init(state: Premium) {
@@ -51,7 +51,12 @@ class NewTableViewViewController: UIViewController {
 
 extension NewTableViewViewController: UITableViewDelegate {
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+        selectedRowIndex = indexPath.row
+        tableView.reloadData()
+        
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -77,15 +82,17 @@ extension NewTableViewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NewTableViewCell.id, for: indexPath) as? NewTableViewCell else { return UITableViewCell() }
         var country: Country
-        let section = indexPath.section
-        let row = indexPath.row
-        
         
         if state == .notPremium {
             if indexPath.section == 0 {
                 let filteredCountries = countries.filter { $0.premium == false }
                 country = filteredCountries[indexPath.row]
                 cell.configure(with: country, premiumStatus: false)
+                if indexPath.row == selectedRowIndex {
+                    cell.checkImage.image = UIImage(named: "checked")
+                } else {
+                    cell.checkImage.image = UIImage(named: "unchecked")
+                }
             } else {
                 let filteredCountries = countries.filter { $0.premium == true }
                 country = filteredCountries[indexPath.row]
@@ -95,8 +102,12 @@ extension NewTableViewViewController: UITableViewDataSource {
             country = countries[indexPath.row]
             country.premium = false
             cell.configure(with: country, premiumStatus: true)
+            if indexPath.row == selectedRowIndex {
+                cell.checkImage.image = UIImage(named: "checked")
+            } else {
+                cell.checkImage.image = UIImage(named: "unchecked")
+            }
         }
-        
         return cell
     }
     
