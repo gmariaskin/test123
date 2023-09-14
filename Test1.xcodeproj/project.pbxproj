@@ -31,6 +31,11 @@
 		F785A0FF2AAF54C9009F3D09 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0FE2AAF54C9009F3D09 /* NewTableViewCell.swift */; };
 		F785A1012AAF54D8009F3D09 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1002AAF54D8009F3D09 /* TableViewModel.swift */; };
 		F785A1032AAF723B009F3D09 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1022AAF723B009F3D09 /* HeaderView.swift */; };
+		F785A1082AB33972009F3D09 /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1072AB33972009F3D09 /* BlockViewController.swift */; };
+		F785A10B2AB33997009F3D09 /* BlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A10A2AB33997009F3D09 /* BlockCell.swift */; };
+		F785A10D2AB339A9009F3D09 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A10C2AB339A9009F3D09 /* BlockView.swift */; };
+		F785A10F2AB339D5009F3D09 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A10E2AB339D5009F3D09 /* BlockModel.swift */; };
+		F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1102AB34D89009F3D09 /* BlockHeader.swift */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
@@ -65,6 +70,11 @@
 		F785A0FE2AAF54C9009F3D09 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		F785A1002AAF54D8009F3D09 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		F785A1022AAF723B009F3D09 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F785A1072AB33972009F3D09 /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
+		F785A10A2AB33997009F3D09 /* BlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCell.swift; sourceTree = "<group>"; };
+		F785A10C2AB339A9009F3D09 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
+		F785A10E2AB339D5009F3D09 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
+		F785A1102AB34D89009F3D09 /* BlockHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHeader.swift; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 		178C6FFE2AA5E8D80038FA24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F785A1042AB3394E009F3D09 /* BlockCollectionViewScreen */,
 				F785A0F62AAF5468009F3D09 /* NewTableViewScreen */,
 				F785A0E62AAE028B009F3D09 /* NewCollectionScreen */,
 				17A3222D2AAB2AC200A155D6 /* CollectionScreen */,
@@ -365,6 +376,42 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F785A1042AB3394E009F3D09 /* BlockCollectionViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1062AB3395D009F3D09 /* Model */,
+				F785A1052AB3395A009F3D09 /* View */,
+			);
+			path = BlockCollectionViewScreen;
+			sourceTree = "<group>";
+		};
+		F785A1052AB3395A009F3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1072AB33972009F3D09 /* BlockViewController.swift */,
+				F785A10C2AB339A9009F3D09 /* BlockView.swift */,
+				F785A1092AB33974009F3D09 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F785A1062AB3395D009F3D09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F785A10E2AB339D5009F3D09 /* BlockModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F785A1092AB33974009F3D09 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F785A10A2AB33997009F3D09 /* BlockCell.swift */,
+				F785A1102AB34D89009F3D09 /* BlockHeader.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F7A8FA0D2AA669FE00933335 /* SecondScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +559,7 @@
 				F785A1012AAF54D8009F3D09 /* TableViewModel.swift in Sources */,
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
+				F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */,
 				F785A1032AAF723B009F3D09 /* HeaderView.swift in Sources */,
 				17A322272AAB0FF800A155D6 /* CustomCell.swift in Sources */,
 				F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */,
@@ -521,14 +569,18 @@
 				F785A0FC2AAF54AC009F3D09 /* NewTableView.swift in Sources */,
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
+				F785A10D2AB339A9009F3D09 /* BlockView.swift in Sources */,
 				F785A0FF2AAF54C9009F3D09 /* NewTableViewCell.swift in Sources */,
 				178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */,
 				178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */,
 				F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */,
 				17A322242AAB0F7500A155D6 /* TableViewScreen.swift in Sources */,
+				F785A10B2AB33997009F3D09 /* BlockCell.swift in Sources */,
+				F785A1082AB33972009F3D09 /* BlockViewController.swift in Sources */,
 				17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */,
 				F785A0FA2AAF5498009F3D09 /* NewTableViewViewController.swift in Sources */,
 				F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */,
+				F785A10F2AB339D5009F3D09 /* BlockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
