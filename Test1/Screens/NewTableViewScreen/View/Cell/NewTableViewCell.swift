@@ -63,6 +63,8 @@ class NewTableViewCell: UITableViewCell {
         
         backgroundColor = .clear
         
+        layoutSubviews()
+        
         addSubview(countryImage)
         addSubview(nameLabel)
         addSubview(signalImage)
@@ -115,6 +117,14 @@ class NewTableViewCell: UITableViewCell {
             self.checkImage.image = UIImage(named: "locked")
         } else {
             self.checkImage.image = UIImage(named: "unchecked")
+        }
+    }
+    
+    func configureState(with state: CheckButtonState ) {
+        switch state {
+        case .checked: self.checkImage.image = UIImage(named: "checked")
+        case .locked: self.checkImage.image = UIImage(named: "locked")
+        case .unchecked: self.checkImage.image = UIImage(named: "unchecked")
         }
     }
 }

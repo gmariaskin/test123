@@ -92,9 +92,9 @@ extension NewTableViewViewController: UITableViewDataSource {
                 country = filteredCountries[indexPath.row]
                 cell.configure(with: country, premiumStatus: false)
                 if indexPath.row == selectedRowIndex {
-                    cell.checkImage.image = UIImage(named: "checked")
+                    cell.configureState(with: .checked)
                 } else {
-                    cell.checkImage.image = UIImage(named: "unchecked")
+                    cell.configureState(with: .unchecked)
                 }
             } else {
                 let filteredCountries = countries.filter { $0.premium == true }
@@ -106,9 +106,9 @@ extension NewTableViewViewController: UITableViewDataSource {
             country.premium = false
             cell.configure(with: country, premiumStatus: true)
             if indexPath.row == selectedRowIndex {
-                cell.checkImage.image = UIImage(named: "checked")
+                cell.configureState(with: .checked)
             } else {
-                cell.checkImage.image = UIImage(named: "unchecked")
+                cell.configureState(with: .unchecked)
             }
         }
         return cell
