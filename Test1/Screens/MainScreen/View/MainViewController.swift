@@ -55,6 +55,27 @@ extension MainViewController {
     
     @objc private func goToSecondVCOrange() {
         
-        goToNextScreen(with: .orange)
+//        goToNextScreen(with: .orange)
+        let vc = NewTableViewViewController(state: .premium)
+        vc.delegate = self
+//        vc.handler = { country in
+//            print(country.countryName)
+//        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+//MARK: ProtocolDelegate
+extension MainViewController: ProtocolDelegate {
+    func countryHandler(with item: Country, state: Bool) {
+        print(item.countryName)
+        DispatchQueue.main.async {
+            self.mainView.titleLabel.text = item.countryName
+        }
+        
+    }
+    
+    func handler() {
+        print("Success")
     }
 }

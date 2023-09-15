@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "colombia.png",
+      "filename" : "ios Photos.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "colombia@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "colombia@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -7,12 +7,21 @@
 
 import UIKit
 
+protocol ProtocolDelegate: AnyObject {
+//    var test: Bool { get set }
+    func handler()
+    func countryHandler(with item: Country, state: Bool)
+}
+
 class NewTableViewViewController: UIViewController {
     
     //MARK: - Properties
     var state: Premium
     var mainView: NewTableView
     var selectedRowIndex: Int = -1
+    
+    weak var delegate: ProtocolDelegate?
+    var handler: ((Country) -> Void)?
     
     //MARK: - Lifecycle
     init(state: Premium) {
@@ -45,6 +54,13 @@ class NewTableViewViewController: UIViewController {
         mainView.tableView.register(NewTableViewCell.self, forCellReuseIdentifier: NewTableViewCell.id)
         mainView.tableView.register(HeaderView.self, forHeaderFooterViewReuseIdentifier: HeaderView.id)
     }
+    
+    private func showAlert(title: String) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
 //MARK: - UITableViewDelegate
@@ -52,13 +68,18 @@ class NewTableViewViewController: UIViewController {
 extension NewTableViewViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row != selectedRowIndex{
-            selectedRowIndex = indexPath.row
-            tableView.reloadData()
-        } else {
-            selectedRowIndex = -1
-            tableView.reloadData()
-        }
+        delegate?.handler()
+        delegate?.countryHandler(with: countries[indexPath.row], state: true)
+        navigationController?.popViewController(animated: true)
+//        handler?(countries[indexPath.row])
+        
+//        if indexPath.row != selectedRowIndex{
+//            selectedRowIndex = indexPath.row
+//            tableView.reloadData()
+//        } else {
+//            selectedRowIndex = -1
+//            tableView.reloadData()
+//        }
     }
 }
 
@@ -84,6 +105,7 @@ extension NewTableViewViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NewTableViewCell.id, for: indexPath) as? NewTableViewCell else { return UITableViewCell() }
+        cell.delegate = self
         var country: Country
         
         if state == .notPremium {
@@ -121,7 +143,20 @@ extension NewTableViewViewController: UITableViewDataSource {
         return header
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100
+//    }
+}
+
+//MARK: -  NewTableViewCellDelegate
+extension NewTableViewViewController: NewTableViewCellDelegate {
+    func didRemoveServer(cell: UITableViewCell) {
+        guard let newTableViewCell = cell as? NewTableViewCell else { return }
+        guard let index = mainView.tableView.indexPath(for: cell) else { return }
+        showAlert(title: countries[index.row].countryName!)
+        countries.remove(at: index.row)
+        mainView.tableView.reloadData()
+        
     }
 }
+

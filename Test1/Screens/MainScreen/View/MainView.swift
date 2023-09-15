@@ -24,6 +24,8 @@ class MainView: UIView {
         return button2
     }()
     
+    let titleLabel = UILabel()
+    
     //MARK: - Function(s)
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,9 +43,12 @@ class MainView: UIView {
     }
     
     private func setup() {
+        titleLabel.font = .systemFont(ofSize: 27, weight: .semibold)
+        titleLabel.textColor = .black
         
         addSubview(button1)
         addSubview(button2)
+        addSubview(titleLabel)
         
         button1.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(20)
@@ -53,6 +58,10 @@ class MainView: UIView {
         button2.snp.makeConstraints { make in
             make.trailing.equalToSuperview()
             make.top.equalToSuperview().offset(100)
+        }
+        
+        titleLabel.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
     }
 

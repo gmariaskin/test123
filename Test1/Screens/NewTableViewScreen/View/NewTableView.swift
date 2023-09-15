@@ -12,8 +12,8 @@ class NewTableView: UIView {
 //MARK: - Properties
     
     var tableView: UITableView = {
-        let obj = UITableView(frame: .zero, style: .insetGrouped)
-        obj.rowHeight = 100
+        let obj = UITableView()
+        obj.rowHeight = UITableView.automaticDimension
         obj.backgroundColor = .darkGray
         return obj
     }()
