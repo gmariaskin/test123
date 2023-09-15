@@ -60,7 +60,7 @@ class BlockCell: UICollectionViewCell {
         }
     }
     
-    func configure(with content: Content) {
+    func configure(with content: BlockModel.Content) {
         self.image.image = UIImage(named: content.imageName)
         self.label.text = content.name
     }

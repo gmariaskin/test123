@@ -12,10 +12,19 @@ class BlockViewController: UIViewController {
     //MARK: - Properties
     
     private let mainView = BlockView()
-    
     private var selectedItems: Set<Int> = []
+    private var blockModel: BlockModel
     
     //MARK: - Lifecycle
+    
+    init(blockModel: BlockModel) {
+        self.blockModel = blockModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         view = mainView
@@ -62,13 +71,13 @@ extension BlockViewController: UICollectionViewDelegateFlowLayout {
 extension BlockViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return contentArray.count
+        return blockModel.contentArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BlockCell.id, for: indexPath) as? BlockCell else { return UICollectionViewCell() }
-        cell.configure(with: contentArray[indexPath.row])
+        cell.configure(with: blockModel.contentArray[indexPath.row])
         return cell
     }
     

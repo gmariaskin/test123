@@ -61,5 +61,6 @@ class BlockView: UIView {
             $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).inset(50)
             $0.top.equalTo(safeAreaLayoutGuide.snp.top)
         }
+    
     }
 }
