@@ -48,7 +48,6 @@
 		F785A1362AB5F15B009F3D09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1352AB5F15B009F3D09 /* SettingsViewController.swift */; };
 		F785A1382AB5F9E7009F3D09 /* AdBlockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1372AB5F9E7009F3D09 /* AdBlockNavigationController.swift */; };
 		F785A13A2AB6E028009F3D09 /* RulesMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1392AB6E028009F3D09 /* RulesMainTableViewCell.swift */; };
-		F785A13E2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A13D2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
@@ -100,7 +99,6 @@
 		F785A1352AB5F15B009F3D09 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F785A1372AB5F9E7009F3D09 /* AdBlockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockNavigationController.swift; sourceTree = "<group>"; };
 		F785A1392AB6E028009F3D09 /* RulesMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesMainTableViewCell.swift; sourceTree = "<group>"; };
-		F785A13D2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockMainScreenModel.swift; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
@@ -522,7 +520,6 @@
 		F785A11D2AB4B3F9009F3D09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F785A13D2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -711,7 +708,6 @@
 				F785A1252AB4B466009F3D09 /* AdBlockListViewController.swift in Sources */,
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
 				F785A1272AB4B47A009F3D09 /* AdBlockListView.swift in Sources */,
-				F785A13E2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift in Sources */,
 				F785A1342AB5F150009F3D09 /* VoiceRecViewController.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
 				F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */,

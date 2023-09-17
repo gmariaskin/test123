@@ -56,6 +56,23 @@ class AdBlockMainViewController: UIViewController {
 
 }
 
+//MARK: - Model
+
+struct MainTableViewCell {
+    let header: String
+    let counter: String
+    let description: String
+    let image: String
+}
+
+private let mainViewCells: [MainTableViewCell] = [
+    
+MainTableViewCell(header: "Block rules", counter: "0 rules", description: "Pesonalize the blocklist for a more comfortable experience", image: "block"),
+MainTableViewCell(header: "Block list", counter: "0 websites", description: "Manually enter a list of websites you wish to block", image: "list")
+]
+
+//MARK: - UITableViewDataSource
+
 extension AdBlockMainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
@@ -79,6 +96,8 @@ extension AdBlockMainViewController: UITableViewDataSource {
         return 88
     }
 }
+
+//MARK: - UITableViewDelegate
 
 extension AdBlockMainViewController: UITableViewDelegate {
     
