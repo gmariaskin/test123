@@ -18,14 +18,14 @@ class AdBlockMainViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-       
     
-//MARK: - Actions
+    
+    //MARK: - Actions
     
     @objc func powerButtonTapped() {
         
@@ -33,10 +33,13 @@ class AdBlockMainViewController: UIViewController {
             mainView.powerButton.setImage(UIImage(named: "turnedOff"), for: .normal)
             mainView.blockOn = false
             mainView.stateLabel.halfTextColorChange(fullText: "AD BLOCK IS TURNED OFF", changeText: "TURNED OFF")
+            presentGuide()
+            
         } else {
             mainView.powerButton.setImage(UIImage(named: "turnedOn"), for: .normal)
             mainView.blockOn = true
             mainView.stateLabel.halfTextColorChange(fullText: "AD BLOCK IS TURNED ON", changeText: "TURNED ON")
+            presentGuide()
         }
     }
     
@@ -45,15 +48,25 @@ class AdBlockMainViewController: UIViewController {
         mainView.rulesTableView.dataSource = self
         mainView.rulesTableView.delegate = self
         mainView.rulesTableView.register(RulesMainTableViewCell.self, forCellReuseIdentifier: RulesMainTableViewCell.id)
-        mainView.rulesTableView.backgroundColor = .gray
-
+        //mainView.rulesTableView.backgroundColor = .gray
+        mainView.rulesTableView.isScrollEnabled = false
+        
         
         mainView.powerButton.addTarget(self, action: #selector(powerButtonTapped), for: .touchUpInside)
-    
-        
     }
-   
-
+    
+    private func presentGuide() {
+        
+        let guideVC = AdBlockGuideViewController()
+        if let sheet = guideVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+        }
+        guideVC.modalPresentationStyle = .pageSheet
+        guideVC.modalTransitionStyle = .coverVertical
+        present(guideVC, animated: true)
+    }
+    
+    
 }
 
 //MARK: - Model
@@ -67,8 +80,8 @@ struct MainTableViewCell {
 
 private let mainViewCells: [MainTableViewCell] = [
     
-MainTableViewCell(header: "Block rules", counter: "0 rules", description: "Pesonalize the blocklist for a more comfortable experience", image: "block"),
-MainTableViewCell(header: "Block list", counter: "0 websites", description: "Manually enter a list of websites you wish to block", image: "list")
+    MainTableViewCell(header: "Block rules", counter: "0 rules", description: "Pesonalize the blocklist for a more comfortable experience", image: "block"),
+    MainTableViewCell(header: "Block list", counter: "0 websites", description: "Manually enter a list of websites you wish to block", image: "list")
 ]
 
 //MARK: - UITableViewDataSource
@@ -79,7 +92,7 @@ extension AdBlockMainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       guard let cell = tableView.dequeueReusableCell(withIdentifier: RulesMainTableViewCell.id, for: indexPath) as? RulesMainTableViewCell else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RulesMainTableViewCell.id, for: indexPath) as? RulesMainTableViewCell else { return UITableViewCell()}
         cell.configure(with: mainViewCells[indexPath.row])
         return cell
     }
@@ -95,6 +108,12 @@ extension AdBlockMainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 88
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 22
+    }
+    
+    
 }
 
 //MARK: - UITableViewDelegate

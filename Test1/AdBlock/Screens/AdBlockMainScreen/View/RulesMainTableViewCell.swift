@@ -14,13 +14,15 @@ class RulesMainTableViewCell: UITableViewCell {
     private let headerLabel: UILabel = {
         let obj = UILabel()
         obj.textColor = .white
-        obj.font = UIFont(name: "SFProText", size: 17)
+        obj.font = UIFont(name: "SF-Pro-Text-Bold", size: 17)
         return obj
     }()
     
     private let counterLabel: UILabel = {
         let obj = UILabel()
-        obj.font = UIFont(name: "SFProText", size: 13)
+        obj.numberOfLines = 1
+        obj.font = UIFont(name: "SF-Pro-Text-Regular", size: 12)
+        obj.adjustsFontSizeToFitWidth = true
         obj.textColor = UIColor(named: "accent")
         return obj
     }()
@@ -28,8 +30,10 @@ class RulesMainTableViewCell: UITableViewCell {
     private let descriptionLabel: UILabel = {
         let obj = UILabel()
         obj.numberOfLines = 2
-        obj.font = UIFont(name: "SFProText", size: 12)
-        obj.textColor = .gray
+        obj.adjustsFontSizeToFitWidth = true
+        obj.minimumScaleFactor = 0.5
+        obj.font = UIFont(name: "SF-Pro-Text-Regular", size: 12)
+        obj.textColor = .lightGray
         return obj
     }()
     
@@ -52,10 +56,17 @@ class RulesMainTableViewCell: UITableViewCell {
     
     private func setup(){
         
+        
+        contentView.layer.cornerRadius = contentView.frame.height / 2
+        contentView.backgroundColor = .black
+        contentView.clipsToBounds = true
+        
         addSubview(headerLabel)
         addSubview(counterLabel)
         addSubview(descriptionLabel)
         addSubview(image)
+        
+        descriptionLabel.font = UIFont(name: "SF-Pro-Text-Bold", size: 30)
         
         headerLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(8)
@@ -64,12 +75,13 @@ class RulesMainTableViewCell: UITableViewCell {
         
         counterLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(62)
-            make.top.equalToSuperview().inset(32)
+            make.top.equalTo(headerLabel.snp.bottom).inset(2)
         }
         
         descriptionLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(62)
-            make.top.equalToSuperview().inset(48)
+            make.top.equalTo(counterLabel.snp.bottom).inset(2)
+            make.trailing.equalToSuperview().inset(124)
         }
         
         image.snp.makeConstraints { make in

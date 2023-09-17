@@ -22,10 +22,11 @@ class AdBlockMainView: UIView {
     
     let rulesTableView = UITableView(frame: .zero, style: .insetGrouped)
     
+    
     let stateLabel: UILabel = {
         let obj = UILabel()
         obj.textAlignment = .center
-        obj.font = UIFont(name: "SFProText", size: 22)
+        obj.font = UIFont(name: "SFProText-Bold", size: 22)
         obj.halfTextColorChange(fullText: "AD BLOCK IS TURNED OFF", changeText: "TURNED OFF")
         return obj
     }()
@@ -48,13 +49,15 @@ class AdBlockMainView: UIView {
     private func setup(){
         
         
-        backgroundColor = .white
+        backgroundColor = UIColor(red: 0.95, green: 0.97, blue: 1.00, alpha: 1.00)
         
         addSubview(powerButton)
         addSubview(rulesTableView)
         addSubview(stateLabel)
         addSubview(rulesTableView)
         
+        rulesTableView.rowHeight = UITableView.automaticDimension
+        rulesTableView.backgroundColor = .clear
      
         powerButton.imageView?.contentMode = .scaleAspectFit
         
@@ -72,8 +75,10 @@ class AdBlockMainView: UIView {
         }
         
         rulesTableView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(20)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalToSuperview().inset(505)
+            make.height.equalTo(236)
+            make.bottom.equalToSuperview().inset(141)
         }
     }
     

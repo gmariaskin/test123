@@ -12,7 +12,8 @@ class AdBlockNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.viewControllers = [AdBlockMainViewController(), AdBlockRulesViewController(), AdBlockListViewController()]
+        self.viewControllers = [AdBlockMainViewController(), AdBlockRulesViewController(), AdBlockListViewController(),
+        AdBlockGuideViewController()]
     }
     
 

@@ -48,6 +48,10 @@
 		F785A1362AB5F15B009F3D09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1352AB5F15B009F3D09 /* SettingsViewController.swift */; };
 		F785A1382AB5F9E7009F3D09 /* AdBlockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1372AB5F9E7009F3D09 /* AdBlockNavigationController.swift */; };
 		F785A13A2AB6E028009F3D09 /* RulesMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1392AB6E028009F3D09 /* RulesMainTableViewCell.swift */; };
+		F785A1402AB7352B009F3D09 /* AdBlockGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A13F2AB7352B009F3D09 /* AdBlockGuideViewController.swift */; };
+		F785A1442AB7356D009F3D09 /* AdBlockGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1432AB7356D009F3D09 /* AdBlockGuideView.swift */; };
+		F785A1462AB756F0009F3D09 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F785A1452AB756F0009F3D09 /* SF-Pro-Text-Bold.otf */; };
+		F785A1482AB756FC009F3D09 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F785A1472AB756FC009F3D09 /* SF-Pro-Text-Regular.otf */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
@@ -99,6 +103,10 @@
 		F785A1352AB5F15B009F3D09 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F785A1372AB5F9E7009F3D09 /* AdBlockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockNavigationController.swift; sourceTree = "<group>"; };
 		F785A1392AB6E028009F3D09 /* RulesMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesMainTableViewCell.swift; sourceTree = "<group>"; };
+		F785A13F2AB7352B009F3D09 /* AdBlockGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockGuideViewController.swift; sourceTree = "<group>"; };
+		F785A1432AB7356D009F3D09 /* AdBlockGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockGuideView.swift; sourceTree = "<group>"; };
+		F785A1452AB756F0009F3D09 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		F785A1472AB756FC009F3D09 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
@@ -175,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				178C6FF22AA5E7700038FA24 /* Assets.xcassets */,
+				F785A1472AB756FC009F3D09 /* SF-Pro-Text-Regular.otf */,
+				F785A1452AB756F0009F3D09 /* SF-Pro-Text-Bold.otf */,
 				178C6FF72AA5E7700038FA24 /* Info.plist */,
 			);
 			path = Resources;
@@ -448,6 +458,7 @@
 		F785A1132AB4B365009F3D09 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F785A1412AB7353B009F3D09 /* AdBlockGuideScreen */,
 				F785A1302AB5F11E009F3D09 /* BlankVC */,
 				F785A12E2AB5ECFC009F3D09 /* TabBarController */,
 				F785A1182AB4B3BD009F3D09 /* AdBlockListScreen */,
@@ -560,6 +571,23 @@
 			path = BlankVC;
 			sourceTree = "<group>";
 		};
+		F785A1412AB7353B009F3D09 /* AdBlockGuideScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1422AB73558009F3D09 /* View */,
+			);
+			path = AdBlockGuideScreen;
+			sourceTree = "<group>";
+		};
+		F785A1422AB73558009F3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F785A13F2AB7352B009F3D09 /* AdBlockGuideViewController.swift */,
+				F785A1432AB7356D009F3D09 /* AdBlockGuideView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F7A8FA0D2AA669FE00933335 /* SecondScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +676,8 @@
 			files = (
 				178C6FF62AA5E7700038FA24 /* LaunchScreen.storyboard in Resources */,
 				178C6FF32AA5E7700038FA24 /* Assets.xcassets in Resources */,
+				F785A1482AB756FC009F3D09 /* SF-Pro-Text-Regular.otf in Resources */,
+				F785A1462AB756F0009F3D09 /* SF-Pro-Text-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +738,7 @@
 				F785A1252AB4B466009F3D09 /* AdBlockListViewController.swift in Sources */,
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
 				F785A1272AB4B47A009F3D09 /* AdBlockListView.swift in Sources */,
+				F785A1442AB7356D009F3D09 /* AdBlockGuideView.swift in Sources */,
 				F785A1342AB5F150009F3D09 /* VoiceRecViewController.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
 				F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */,
@@ -718,6 +749,7 @@
 				17A322372AAB355600A155D6 /* MyTableView.swift in Sources */,
 				F785A0F12AAE0821009F3D09 /* NewCell.swift in Sources */,
 				178C6FEE2AA5E76F0038FA24 /* MainViewController.swift in Sources */,
+				F785A1402AB7352B009F3D09 /* AdBlockGuideViewController.swift in Sources */,
 				F785A0FC2AAF54AC009F3D09 /* NewTableView.swift in Sources */,
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
