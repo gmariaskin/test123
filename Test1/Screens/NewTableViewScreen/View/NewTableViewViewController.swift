@@ -21,8 +21,7 @@ class NewTableViewViewController: UIViewController {
     var selectedRowIndex: Int = -1
     
     weak var delegate: ProtocolDelegate?
-    var handler: ((Country) -> Void)?
-    
+
     //MARK: - Lifecycle
     init(state: Premium) {
         self.mainView = NewTableView()

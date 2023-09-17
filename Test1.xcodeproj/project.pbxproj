@@ -36,6 +36,19 @@
 		F785A10D2AB339A9009F3D09 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A10C2AB339A9009F3D09 /* BlockView.swift */; };
 		F785A10F2AB339D5009F3D09 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A10E2AB339D5009F3D09 /* BlockModel.swift */; };
 		F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1102AB34D89009F3D09 /* BlockHeader.swift */; };
+		F785A1202AB4B421009F3D09 /* AdBlockMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A11F2AB4B421009F3D09 /* AdBlockMainViewController.swift */; };
+		F785A1232AB4B43F009F3D09 /* AdBlockMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1222AB4B43F009F3D09 /* AdBlockMainView.swift */; };
+		F785A1252AB4B466009F3D09 /* AdBlockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1242AB4B466009F3D09 /* AdBlockListViewController.swift */; };
+		F785A1272AB4B47A009F3D09 /* AdBlockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1262AB4B47A009F3D09 /* AdBlockListView.swift */; };
+		F785A1292AB4B493009F3D09 /* AdBlockRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1282AB4B493009F3D09 /* AdBlockRulesView.swift */; };
+		F785A12B2AB4B4A2009F3D09 /* AdBlockRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A12A2AB4B4A2009F3D09 /* AdBlockRulesViewController.swift */; };
+		F785A12D2AB5ECF5009F3D09 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A12C2AB5ECF5009F3D09 /* TabBarController.swift */; };
+		F785A1322AB5F13A009F3D09 /* CallRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1312AB5F13A009F3D09 /* CallRecViewController.swift */; };
+		F785A1342AB5F150009F3D09 /* VoiceRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1332AB5F150009F3D09 /* VoiceRecViewController.swift */; };
+		F785A1362AB5F15B009F3D09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1352AB5F15B009F3D09 /* SettingsViewController.swift */; };
+		F785A1382AB5F9E7009F3D09 /* AdBlockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1372AB5F9E7009F3D09 /* AdBlockNavigationController.swift */; };
+		F785A13A2AB6E028009F3D09 /* RulesMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1392AB6E028009F3D09 /* RulesMainTableViewCell.swift */; };
+		F785A13E2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A13D2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
@@ -75,6 +88,19 @@
 		F785A10C2AB339A9009F3D09 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
 		F785A10E2AB339D5009F3D09 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
 		F785A1102AB34D89009F3D09 /* BlockHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHeader.swift; sourceTree = "<group>"; };
+		F785A11F2AB4B421009F3D09 /* AdBlockMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockMainViewController.swift; sourceTree = "<group>"; };
+		F785A1222AB4B43F009F3D09 /* AdBlockMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockMainView.swift; sourceTree = "<group>"; };
+		F785A1242AB4B466009F3D09 /* AdBlockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockListViewController.swift; sourceTree = "<group>"; };
+		F785A1262AB4B47A009F3D09 /* AdBlockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockListView.swift; sourceTree = "<group>"; };
+		F785A1282AB4B493009F3D09 /* AdBlockRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockRulesView.swift; sourceTree = "<group>"; };
+		F785A12A2AB4B4A2009F3D09 /* AdBlockRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockRulesViewController.swift; sourceTree = "<group>"; };
+		F785A12C2AB5ECF5009F3D09 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F785A1312AB5F13A009F3D09 /* CallRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRecViewController.swift; sourceTree = "<group>"; };
+		F785A1332AB5F150009F3D09 /* VoiceRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecViewController.swift; sourceTree = "<group>"; };
+		F785A1352AB5F15B009F3D09 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F785A1372AB5F9E7009F3D09 /* AdBlockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockNavigationController.swift; sourceTree = "<group>"; };
+		F785A1392AB6E028009F3D09 /* RulesMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesMainTableViewCell.swift; sourceTree = "<group>"; };
+		F785A13D2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBlockMainScreenModel.swift; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
@@ -113,6 +139,7 @@
 		178C6FE82AA5E76F0038FA24 /* Test1 */ = {
 			isa = PBXGroup;
 			children = (
+				F785A1122AB4B359009F3D09 /* AdBlock */,
 				178C6FFD2AA5E8C70038FA24 /* Application */,
 				178C6FFE2AA5E8D80038FA24 /* Screens */,
 				178C70012AA5E9A00038FA24 /* Services */,
@@ -412,6 +439,130 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F785A1122AB4B359009F3D09 /* AdBlock */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1132AB4B365009F3D09 /* Screens */,
+			);
+			path = AdBlock;
+			sourceTree = "<group>";
+		};
+		F785A1132AB4B365009F3D09 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1302AB5F11E009F3D09 /* BlankVC */,
+				F785A12E2AB5ECFC009F3D09 /* TabBarController */,
+				F785A1182AB4B3BD009F3D09 /* AdBlockListScreen */,
+				F785A1162AB4B39D009F3D09 /* AdBlockRulesScreen */,
+				F785A1142AB4B36C009F3D09 /* AdBlockMainScreen */,
+				F785A1372AB5F9E7009F3D09 /* AdBlockNavigationController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F785A1142AB4B36C009F3D09 /* AdBlockMainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F785A11E2AB4B3FD009F3D09 /* View */,
+				F785A11D2AB4B3F9009F3D09 /* Model */,
+			);
+			path = AdBlockMainScreen;
+			sourceTree = "<group>";
+		};
+		F785A1162AB4B39D009F3D09 /* AdBlockRulesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F785A11C2AB4B3F5009F3D09 /* Model */,
+				F785A11A2AB4B3EC009F3D09 /* View */,
+			);
+			path = AdBlockRulesScreen;
+			sourceTree = "<group>";
+		};
+		F785A1182AB4B3BD009F3D09 /* AdBlockListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F785A11B2AB4B3F0009F3D09 /* Model */,
+				F785A1192AB4B3E8009F3D09 /* View */,
+			);
+			path = AdBlockListScreen;
+			sourceTree = "<group>";
+		};
+		F785A1192AB4B3E8009F3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1242AB4B466009F3D09 /* AdBlockListViewController.swift */,
+				F785A1262AB4B47A009F3D09 /* AdBlockListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F785A11A2AB4B3EC009F3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1282AB4B493009F3D09 /* AdBlockRulesView.swift */,
+				F785A12A2AB4B4A2009F3D09 /* AdBlockRulesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F785A11B2AB4B3F0009F3D09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F785A11C2AB4B3F5009F3D09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F785A11D2AB4B3F9009F3D09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F785A13D2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F785A11E2AB4B3FD009F3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F785A11F2AB4B421009F3D09 /* AdBlockMainViewController.swift */,
+				F785A1222AB4B43F009F3D09 /* AdBlockMainView.swift */,
+				F785A1392AB6E028009F3D09 /* RulesMainTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F785A12E2AB5ECFC009F3D09 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F785A12F2AB5ED02009F3D09 /* View */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		F785A12F2AB5ED02009F3D09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F785A12C2AB5ECF5009F3D09 /* TabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F785A1302AB5F11E009F3D09 /* BlankVC */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1312AB5F13A009F3D09 /* CallRecViewController.swift */,
+				F785A1332AB5F150009F3D09 /* VoiceRecViewController.swift */,
+				F785A1352AB5F15B009F3D09 /* SettingsViewController.swift */,
+			);
+			path = BlankVC;
+			sourceTree = "<group>";
+		};
 		F7A8FA0D2AA669FE00933335 /* SecondScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,9 +708,14 @@
 				F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */,
 				F785A0EE2AAE07C4009F3D09 /* NewCollectionViewController.swift in Sources */,
 				F785A1012AAF54D8009F3D09 /* TableViewModel.swift in Sources */,
+				F785A1252AB4B466009F3D09 /* AdBlockListViewController.swift in Sources */,
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
+				F785A1272AB4B47A009F3D09 /* AdBlockListView.swift in Sources */,
+				F785A13E2AB6E4E8009F3D09 /* AdBlockMainScreenModel.swift in Sources */,
+				F785A1342AB5F150009F3D09 /* VoiceRecViewController.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
 				F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */,
+				F785A1322AB5F13A009F3D09 /* CallRecViewController.swift in Sources */,
 				F785A1032AAF723B009F3D09 /* HeaderView.swift in Sources */,
 				17A322272AAB0FF800A155D6 /* CustomCell.swift in Sources */,
 				F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */,
@@ -569,17 +725,25 @@
 				F785A0FC2AAF54AC009F3D09 /* NewTableView.swift in Sources */,
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
+				F785A13A2AB6E028009F3D09 /* RulesMainTableViewCell.swift in Sources */,
 				F785A10D2AB339A9009F3D09 /* BlockView.swift in Sources */,
 				F785A0FF2AAF54C9009F3D09 /* NewTableViewCell.swift in Sources */,
+				F785A1362AB5F15B009F3D09 /* SettingsViewController.swift in Sources */,
+				F785A12D2AB5ECF5009F3D09 /* TabBarController.swift in Sources */,
 				178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */,
 				178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */,
 				F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */,
 				17A322242AAB0F7500A155D6 /* TableViewScreen.swift in Sources */,
+				F785A12B2AB4B4A2009F3D09 /* AdBlockRulesViewController.swift in Sources */,
 				F785A10B2AB33997009F3D09 /* BlockCell.swift in Sources */,
+				F785A1232AB4B43F009F3D09 /* AdBlockMainView.swift in Sources */,
+				F785A1382AB5F9E7009F3D09 /* AdBlockNavigationController.swift in Sources */,
 				F785A1082AB33972009F3D09 /* BlockViewController.swift in Sources */,
 				17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */,
 				F785A0FA2AAF5498009F3D09 /* NewTableViewViewController.swift in Sources */,
 				F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */,
+				F785A1292AB4B493009F3D09 /* AdBlockRulesView.swift in Sources */,
+				F785A1202AB4B421009F3D09 /* AdBlockMainViewController.swift in Sources */,
 				F785A10F2AB339D5009F3D09 /* BlockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
