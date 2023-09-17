@@ -26,7 +26,7 @@ class AdBlockMainView: UIView {
     let stateLabel: UILabel = {
         let obj = UILabel()
         obj.textAlignment = .center
-        obj.font = UIFont(name: "SFProText-Bold", size: 22)
+        obj.font = .systemFont(ofSize: 22, weight: .bold)
         obj.halfTextColorChange(fullText: "AD BLOCK IS TURNED OFF", changeText: "TURNED OFF")
         return obj
     }()
