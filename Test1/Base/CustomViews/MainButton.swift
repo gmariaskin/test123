@@ -20,7 +20,7 @@ class MainButton: UIButton {
     }
 
     private func setup() {
-        backgroundColor = UIColor(named: "accent")
+        backgroundColor = R.color.mainRed()
         layer.cornerRadius = 27
         titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
 

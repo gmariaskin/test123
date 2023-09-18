@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		172B0B552AB88ED5009ECE59 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B0B542AB88ED5009ECE59 /* MainButton.swift */; };
+		172B0B582AB89221009ECE59 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 172B0B572AB89221009ECE59 /* RswiftLibrary */; };
 		178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C6FE92AA5E76F0038FA24 /* AppDelegate.swift */; };
 		178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C6FEB2AA5E76F0038FA24 /* SceneDelegate.swift */; };
 		178C6FEE2AA5E76F0038FA24 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C6FED2AA5E76F0038FA24 /* MainViewController.swift */; };
@@ -122,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3249B0A3CBD6D5FDF79032F /* Pods_Test1.framework in Frameworks */,
+				172B0B582AB89221009ECE59 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,8 +638,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				172B0B5A2AB89240009ECE59 /* PBXTargetDependency */,
 			);
 			name = Test1;
+			packageProductDependencies = (
+				172B0B572AB89221009ECE59 /* RswiftLibrary */,
+			);
 			productName = Test1;
 			productReference = 178C6FE62AA5E76F0038FA24 /* Test1.app */;
 			productType = "com.apple.product-type.application";
@@ -666,6 +672,9 @@
 				Base,
 			);
 			mainGroup = 178C6FDD2AA5E76F0038FA24;
+			packageReferences = (
+				172B0B562AB89221009ECE59 /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = 178C6FE72AA5E76F0038FA24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -785,6 +794,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		172B0B5A2AB89240009ECE59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 172B0B592AB89240009ECE59 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		178C6FF42AA5E7700038FA24 /* LaunchScreen.storyboard */ = {
@@ -998,6 +1014,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		172B0B562AB89221009ECE59 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		172B0B572AB89221009ECE59 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 172B0B562AB89221009ECE59 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		172B0B592AB89240009ECE59 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 178C6FDE2AA5E76F0038FA24 /* Project object */;
 }

@@ -12,7 +12,7 @@ class AdBlockGuideView: UIView {
     let skipButton: UIButton = {
         let obj = UIButton()
         obj.setTitle("Skip", for: .normal)
-        obj.setTitleColor(UIColor(named: "accent"), for: .normal)
+        obj.setTitleColor(R.color.mainRed(), for: .normal)
         return obj
     }()
     
