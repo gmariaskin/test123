@@ -9,21 +9,24 @@ import UIKit
 
 class AdBlockListViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private let mainView = AdBlockRulesView()
 
-        // Do any additional setup after loading the view.
+    
+    override func loadView() {
+        view = mainView
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
     }
-    */
+    
+    
+    private func setup() {
+        self.title = "Block list"
+        self.navigationController?.navigationBar.backIndicatorImage = R.image.leftArrow()
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage =  R.image.leftArrow()
+        self.navigationController?.navigationBar.tintColor = R.color.mainRed()
+    }
 
 }

@@ -7,19 +7,20 @@
 
 import UIKit
 
+
 class AdBlockGuideView: UIView {
     
     let skipButton: UIButton = {
         let obj = UIButton()
         obj.setTitle("Skip", for: .normal)
-        obj.setTitleColor(R.color.mainRed(), for: .normal)
+      //  obj.setTitleColor(R.color.mainRed(), for: .normal)
         return obj
     }()
     
     private let headerLabel: UILabel = {
         let obj = UILabel()
         obj.text = "How To Use AdBlock"
-        obj.textColor = .black
+        obj.textColor = R.color.mainBlack()
         obj.textAlignment = .center
         obj.font = .systemFont(ofSize: 20, weight: .medium)
         return obj
@@ -30,7 +31,7 @@ class AdBlockGuideView: UIView {
         obj.text = "For using Adblock functionality, follow these steps:"
         obj.textAlignment = .center
         obj.numberOfLines = 2
-        obj.textColor = .black
+        obj.textColor = R.color.mainBlack()
         obj.font = .systemFont(ofSize: 17)
         return obj
     }()
@@ -53,7 +54,7 @@ class AdBlockGuideView: UIView {
         return obj
     }()
     
-    private let feature1 = AdBlockCustomFeatureView(name: "1. Open Settings", image: "settings")
+    private let feature1 = AdBlockCustomFeatureView(name: "1. Open Settings", image: "settings 1")
     private let feature2 = AdBlockCustomFeatureView(name: "2. Scroll and tap Safari", image: "safari")
     private let feature3 = AdBlockCustomFeatureView(name: "3. Then find Extensions", image: "appStore")
     private let feature4 = AdBlockCustomFeatureView(name: "4. Enable all our app blockers", image: "switch")

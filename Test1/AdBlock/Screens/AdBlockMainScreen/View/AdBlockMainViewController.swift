@@ -120,4 +120,14 @@ extension AdBlockMainViewController: UITableViewDataSource {
 
 extension AdBlockMainViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+           
+            navigationController?.pushViewController(AdBlockRulesViewController(), animated: true)
+        } else {
+  
+            navigationController?.pushViewController(AdBlockListViewController(), animated: true)
+        }
+    }
+    
 }

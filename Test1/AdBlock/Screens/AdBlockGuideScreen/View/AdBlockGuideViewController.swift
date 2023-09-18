@@ -25,12 +25,16 @@ class AdBlockGuideViewController: UIViewController {
         mainView.skipButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         mainView.goToButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
     }
-//    FIXME: Все @objc func должны быть приватными и лучше вынести их в отдельный extension //MARK: - Action(s)
-    @objc func dismissView() {
+
+}
+
+extension AdBlockGuideViewController {
+    
+    @objc private func dismissView() {
         self.dismiss(animated: true)
     }
     
-    @objc func openSettings() {
+    @objc private func openSettings() {
         if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
             if UIApplication.shared.canOpenURL(settingsURL) {
                 UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)

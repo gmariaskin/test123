@@ -55,6 +55,7 @@
 		F785A1462AB756F0009F3D09 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F785A1452AB756F0009F3D09 /* SF-Pro-Text-Bold.otf */; };
 		F785A1482AB756FC009F3D09 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F785A1472AB756FC009F3D09 /* SF-Pro-Text-Regular.otf */; };
 		F785A14A2AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1492AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift */; };
+		F785A14D2AB8AF7E009F3D09 /* CustomRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A14C2AB8AF7E009F3D09 /* CustomRuleView.swift */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
@@ -112,6 +113,7 @@
 		F785A1452AB756F0009F3D09 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		F785A1472AB756FC009F3D09 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		F785A1492AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdBlockCustomFeatureView.swift; path = Test1/AdBlock/Screens/AdBlockGuideScreen/View/AdBlockCustomFeatureView.swift; sourceTree = SOURCE_ROOT; };
+		F785A14C2AB8AF7E009F3D09 /* CustomRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRuleView.swift; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				F785A1492AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift */,
 				172B0B542AB88ED5009ECE59 /* MainButton.swift */,
+				F785A14C2AB8AF7E009F3D09 /* CustomRuleView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				178C6FEE2AA5E76F0038FA24 /* MainViewController.swift in Sources */,
 				F785A1402AB7352B009F3D09 /* AdBlockGuideViewController.swift in Sources */,
 				F785A0FC2AAF54AC009F3D09 /* NewTableView.swift in Sources */,
+				F785A14D2AB8AF7E009F3D09 /* CustomRuleView.swift in Sources */,
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
 				F785A14A2AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift in Sources */,

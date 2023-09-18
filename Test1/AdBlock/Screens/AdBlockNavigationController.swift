@@ -14,6 +14,10 @@ class AdBlockNavigationController: UINavigationController {
 
         self.viewControllers = [AdBlockMainViewController(), AdBlockRulesViewController(), AdBlockListViewController(),
         AdBlockGuideViewController()]
+        
+       
+        self.navigationBar.backIndicatorImage = R.image.leftArrow()
+        self.navigationBar.backIndicatorTransitionMaskImage =  R.image.leftArrow()
     }
     
 
