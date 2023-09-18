@@ -14,15 +14,15 @@ class RulesMainTableViewCell: UITableViewCell {
     private let headerLabel: UILabel = {
         let obj = UILabel()
         obj.textColor = .white
-        obj.font = UIFont(name: "SF-Pro-Text-Bold", size: 17)
+        obj.font = .systemFont(ofSize: 17)
         return obj
     }()
     
     private let counterLabel: UILabel = {
         let obj = UILabel()
         obj.numberOfLines = 1
-        obj.font = UIFont(name: "SF-Pro-Text-Regular", size: 12)
-        obj.adjustsFontSizeToFitWidth = true
+        obj.font = .systemFont(ofSize: 12)
+        //obj.adjustsFontSizeToFitWidth = true
         obj.textColor = UIColor(named: "accent")
         return obj
     }()
@@ -31,8 +31,8 @@ class RulesMainTableViewCell: UITableViewCell {
         let obj = UILabel()
         obj.numberOfLines = 2
         obj.adjustsFontSizeToFitWidth = true
-        obj.minimumScaleFactor = 0.5
-        obj.font = UIFont(name: "SF-Pro-Text-Regular", size: 12)
+        //obj.minimumScaleFactor = 0.8
+        obj.font = .systemFont(ofSize: 12)
         obj.textColor = .lightGray
         return obj
     }()
@@ -71,17 +71,20 @@ class RulesMainTableViewCell: UITableViewCell {
         headerLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(8)
             make.leading.equalToSuperview().inset(62)
+            make.height.equalTo(22)
         }
         
         counterLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(62)
             make.top.equalTo(headerLabel.snp.bottom).inset(2)
+            make.height.equalTo(14)
         }
         
         descriptionLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(62)
             make.top.equalTo(counterLabel.snp.bottom).inset(2)
             make.trailing.equalToSuperview().inset(124)
+            make.height.equalTo(32)
         }
         
         image.snp.makeConstraints { make in
