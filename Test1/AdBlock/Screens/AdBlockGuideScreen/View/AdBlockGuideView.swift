@@ -19,6 +19,7 @@ class AdBlockGuideView: UIView {
     private let headerLabel: UILabel = {
         let obj = UILabel()
         obj.text = "How To Use AdBlock"
+        obj.textColor = .black
         obj.textAlignment = .center
         obj.font = .systemFont(ofSize: 20, weight: .medium)
         return obj
@@ -29,6 +30,7 @@ class AdBlockGuideView: UIView {
         obj.text = "For using Adblock functionality, follow these steps:"
         obj.textAlignment = .center
         obj.numberOfLines = 2
+        obj.textColor = .black
         obj.font = .systemFont(ofSize: 17)
         return obj
     }()
@@ -43,11 +45,34 @@ class AdBlockGuideView: UIView {
         return obj
     }()
     
+    lazy var vStackView: UIStackView = {
+        let obj = UIStackView(arrangedSubviews: [
+            feature1,
+            feature2,
+            feature3,
+            feature4
+        ])
+        obj.axis = .vertical
+        obj.distribution = .equalSpacing
+        return obj
+    }()
+    
     private let feature1 = AdBlockCustomFeatureView(name: "1. Open Settings", image: "settings")
     private let feature2 = AdBlockCustomFeatureView(name: "2. Scroll and tap Safari", image: "safari")
     private let feature3 = AdBlockCustomFeatureView(name: "3. Then find Extensions", image: "appStore")
     private let feature4 = AdBlockCustomFeatureView(name: "4. Enable all our app blockers", image: "switch")
     
+    private let dontShowAgainLabel: UILabel = {
+        let obj = UILabel()
+        obj.text = "Don’t show guide again"
+        obj.textColor = .black
+        return obj
+    }()
+    
+    private let switcher: UISwitch = {
+        let obj = UISwitch()
+        return obj
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,70 +91,45 @@ class AdBlockGuideView: UIView {
         addSubview(headerLabel)
         addSubview(subLabel)
         addSubview(goToButton)
-        addSubview(feature1)
-        addSubview(feature2)
-        addSubview(feature3)
-        addSubview(feature4)
-        
-        feature1.backgroundColor = .gray
-        feature2.backgroundColor = .blue
-        feature3.backgroundColor = .brown
-        feature4.backgroundColor = .red
-        
-        
+        addSubview(vStackView)
+        addSubview(dontShowAgainLabel)
+        addSubview(switcher)
         
         skipButton.snp.makeConstraints { make in
-            make.top.trailing.equalToSuperview().inset(16)
+            make.top.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
         }
         
         headerLabel.snp.makeConstraints { make in
+            make.top.equalTo(skipButton.snp.bottom).offset(18)
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(56)
-            //make.leading.trailing.equalToSuperview().inset(102)
-            make.height.equalTo(25)
-            make.width.equalTo(188)
         }
         
         subLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(headerLabel.snp.bottom).inset(-8)
-            make.leading.trailing.equalToSuperview().inset(46)
-            make.height.equalTo(44)
+            make.top.equalTo(headerLabel.snp.bottom).offset(8)
+            make.horizontalEdges.equalToSuperview().inset(46)
+        }
+        
+        vStackView.snp.makeConstraints {
+            $0.top.equalTo(subLabel.snp.bottom).offset(14)
+            $0.horizontalEdges.equalToSuperview().inset(20)
         }
         
         goToButton.snp.makeConstraints { make in
-            make.width.equalTo(353)
+            make.horizontalEdges.equalToSuperview().inset(20)
             make.height.equalTo(54)
-            make.bottom.equalToSuperview().inset(96)
-            make.centerX.equalToSuperview()
+            make.top.equalTo(vStackView.snp.bottom).offset(28)
         }
         
-        feature1.snp.makeConstraints { make in
-            make.centerX.equalTo(subLabel.snp.centerX)
-            make.width.equalTo(353)
-            make.height.equalTo(32)
-            make.top.equalTo(subLabel.snp.bottom).inset(-14)
+        switcher.snp.makeConstraints {
+            $0.top.equalTo(goToButton.snp.bottom).offset(16)
+            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-15)
+            $0.trailing.equalToSuperview().offset(-20)
         }
         
-        feature2.snp.makeConstraints { make in
-            make.centerX.equalTo(feature1.snp.centerX)
-            make.width.equalTo(353)
-            make.height.equalTo(32)
-            make.top.equalTo(feature1.snp.bottom)
-        }
-        
-        feature3.snp.makeConstraints { make in
-            make.centerX.equalTo(feature1.snp.centerX)
-            make.width.equalTo(353)
-            make.height.equalTo(32)
-            make.top.equalTo(feature2.snp.bottom)
-        }
-        
-        feature4.snp.makeConstraints { make in
-            make.centerX.equalTo(feature1.snp.centerX)
-            make.width.equalTo(353)
-            make.height.equalTo(32)
-            make.top.equalTo(feature3.snp.bottom)
+        dontShowAgainLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(20)
+            $0.centerY.equalTo(switcher.snp.centerY)
         }
     }
     

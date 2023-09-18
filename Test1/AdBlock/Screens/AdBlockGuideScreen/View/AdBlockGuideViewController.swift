@@ -25,7 +25,7 @@ class AdBlockGuideViewController: UIViewController {
         mainView.skipButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         mainView.goToButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
     }
-    
+//    FIXME: Все @objc func должны быть приватными и лучше вынести их в отдельный extension //MARK: - Action(s)
     @objc func dismissView() {
         self.dismiss(animated: true)
     }

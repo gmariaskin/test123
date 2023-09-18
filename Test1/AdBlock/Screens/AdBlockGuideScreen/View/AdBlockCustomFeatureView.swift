@@ -16,8 +16,22 @@ class AdBlockCustomFeatureView: UIView {
         return obj
     }()
     
+    private let imageContainerView: UIView = {
+        let obj = UIView()
+        obj.layer.cornerRadius = 16
+        obj.backgroundColor = .systemRed
+        return obj
+    }()
+    
     private let featureImage: UIImageView = {
         let obj = UIImageView()
+        return obj
+    }()
+    
+    private lazy var hStackView: UIStackView = {
+        let obj = UIStackView(arrangedSubviews: [featureName, imageContainerView])
+        obj.axis = .horizontal
+        obj.alignment = .center
         return obj
     }()
     
@@ -25,11 +39,10 @@ class AdBlockCustomFeatureView: UIView {
         super.init(frame: frame)
     }
     
-    init(name: String, image: String) {
-        self.featureImage.image = UIImage(named: image)
-        self.featureName.text = name
-        super.init()
+    init(name: String, image: String, frame: CGRect = .zero) {
+        super.init(frame: frame)
         setup()
+        configure(with: name, image: image)
     }
     
     required init?(coder: NSCoder) {
@@ -37,21 +50,24 @@ class AdBlockCustomFeatureView: UIView {
     }
     
     private func setup() {
+        addSubview(hStackView)
+        imageContainerView.addSubview(featureImage)
         
-        addSubview(featureName)
-        addSubview(featureImage)
-        
-        featureImage.snp.makeConstraints { make in
-            make.top.bottom.trailing.equalToSuperview()
-            make.height.equalTo(32)
+        hStackView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
         
-        featureName.snp.makeConstraints { make in
-            make.leading.top.bottom.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.height.equalTo(32)
+        featureImage.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
         
+        imageContainerView.snp.makeConstraints {
+            $0.size.equalTo(32)
+        }
     }
     
+    func configure(with name: String, image: String) {
+        self.featureImage.image = UIImage(named: image)
+        self.featureName.text = name
+    }
 }
