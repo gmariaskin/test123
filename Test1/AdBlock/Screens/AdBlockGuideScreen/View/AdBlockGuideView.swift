@@ -35,13 +35,9 @@ class AdBlockGuideView: UIView {
         return obj
     }()
     
-    let goToButton: UIButton = {
-        let obj = UIButton()
+    let goToButton: MainButton = {
+        let obj = MainButton()
         obj.setTitle("Go To Settings", for: .normal)
-        obj.titleLabel?.font = .systemFont(ofSize: 17)
-        obj.titleLabel?.textColor = .white
-        obj.backgroundColor = UIColor(named: "accent")
-        obj.layer.cornerRadius = 27
         return obj
     }()
     

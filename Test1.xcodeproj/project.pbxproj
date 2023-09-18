@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172B0B552AB88ED5009ECE59 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172B0B542AB88ED5009ECE59 /* MainButton.swift */; };
 		178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C6FE92AA5E76F0038FA24 /* AppDelegate.swift */; };
 		178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C6FEB2AA5E76F0038FA24 /* SceneDelegate.swift */; };
 		178C6FEE2AA5E76F0038FA24 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C6FED2AA5E76F0038FA24 /* MainViewController.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		1403674658DA0BC849EF67E8 /* Pods-Test1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.release.xcconfig"; path = "Target Support Files/Pods-Test1/Pods-Test1.release.xcconfig"; sourceTree = "<group>"; };
+		172B0B542AB88ED5009ECE59 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		178C6FE62AA5E76F0038FA24 /* Test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178C6FE92AA5E76F0038FA24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178C6FEB2AA5E76F0038FA24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				F785A1492AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift */,
+				172B0B542AB88ED5009ECE59 /* MainButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				F785A0FF2AAF54C9009F3D09 /* NewTableViewCell.swift in Sources */,
 				F785A1362AB5F15B009F3D09 /* SettingsViewController.swift in Sources */,
 				F785A12D2AB5ECF5009F3D09 /* TabBarController.swift in Sources */,
+				172B0B552AB88ED5009ECE59 /* MainButton.swift in Sources */,
 				178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */,
 				178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */,
 				F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */,
