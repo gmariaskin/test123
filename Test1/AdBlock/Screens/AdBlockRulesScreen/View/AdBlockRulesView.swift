@@ -14,6 +14,8 @@ class AdBlockRulesView: UIView {
     private let rule3 = CustomRuleView(rule: "Block trackers", number: 1000, description: "Tracking software blocking", image: R.image.blockTrackers()!)
     private let rule4 = CustomRuleView(rule: "Block adult", number: 525, description: "Blocking ads of a sexual nature", image: R.image.blockAdults()!)
     
+    var numberOfRules: Int = 0 
+    
     lazy var vStackView: UIStackView = {
         let obj = UIStackView(arrangedSubviews: [
             rule1,
@@ -23,7 +25,7 @@ class AdBlockRulesView: UIView {
         ])
         obj.axis = .vertical
         obj.distribution = .equalSpacing
-        obj.spacing = 8
+        obj.spacing = 10
         return obj
     }()
 
@@ -47,5 +49,9 @@ class AdBlockRulesView: UIView {
             make.horizontalEdges.equalToSuperview().inset(20)
         }
         
+  
+        
     }
+    
+  
 }

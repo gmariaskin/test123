@@ -8,6 +8,12 @@
 import UIKit
 
 class AdBlockListView: UIView {
+    
+    private let addButton : MainButton = {
+        let obj = MainButton()
+        obj.setTitle("Add", for: .normal)
+        return obj
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,5 +27,13 @@ class AdBlockListView: UIView {
     private func setup() {
         
         backgroundColor = R.color.bg()
+        
+        addSubview(addButton)
+        
+        addButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(70)
+            make.horizontalEdges.equalToSuperview().inset(20)
+        }
     }
 }

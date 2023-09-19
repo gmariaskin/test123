@@ -10,7 +10,7 @@ import UIKit
 class AdBlockMainViewController: UIViewController {
     
     //MARK: - Properties
-    
+    var totalRules: String = "0"
     private let mainView = AdBlockMainView()
     
     //MARK: - Lifecycle
@@ -93,7 +93,7 @@ extension AdBlockMainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RulesMainTableViewCell.id, for: indexPath) as? RulesMainTableViewCell else { return UITableViewCell()}
-        cell.configure(with: mainViewCells[indexPath.row])
+        cell.configure(with: mainViewCells[indexPath.row], and: totalRules)
         return cell
     }
     
@@ -122,12 +122,22 @@ extension AdBlockMainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-           
+           let vc = AdBlockRulesViewController()
+            vc.delegate = self
             navigationController?.pushViewController(AdBlockRulesViewController(), animated: true)
+            
         } else {
   
             navigationController?.pushViewController(AdBlockListViewController(), animated: true)
+       
         }
     }
     
+}
+
+extension AdBlockMainViewController: RulesCounterDelegate {
+    
+    func countRules(with totalRules: Int){
+       
+    }
 }

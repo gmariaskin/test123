@@ -27,7 +27,7 @@ class CustomRuleView: UIView {
     private let descriptionLabel: UILabel = {
         let obj = UILabel()
         obj.font = .systemFont(ofSize: 12)
-        obj.textColor = R.color.mainGrey()
+        obj.textColor = R.color.mainGray()
         return obj
     }()
     
@@ -60,7 +60,7 @@ class CustomRuleView: UIView {
         self.counterLabel.text = "\(number) Rules"
         self.descriptionLabel.text = description
         self.image.image = image
-    
+        
         setup()
     }
     
@@ -72,7 +72,7 @@ class CustomRuleView: UIView {
         
         backgroundColor = R.color.mainBlack()
         
-       
+        
         self.layer.cornerRadius = 14
         
         self.snp.makeConstraints { make in
@@ -83,8 +83,6 @@ class CustomRuleView: UIView {
         addSubview(image)
         addSubview(onSwitch)
         
-      
-
         hStack.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(2)
             make.leading.equalTo(image.snp.trailing).offset(16)
@@ -102,4 +100,7 @@ class CustomRuleView: UIView {
             make.centerY.equalToSuperview()
         }
     }
+    
+    
 }
+

@@ -9,7 +9,7 @@ import UIKit
 
 class AdBlockListViewController: UIViewController {
 
-    private let mainView = AdBlockRulesView()
+    private let mainView = AdBlockListView()
 
     
     override func loadView() {
@@ -27,6 +27,9 @@ class AdBlockListViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorImage = R.image.leftArrow()
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage =  R.image.leftArrow()
         self.navigationController?.navigationBar.tintColor = R.color.mainRed()
+
+       
+     
     }
 
 }

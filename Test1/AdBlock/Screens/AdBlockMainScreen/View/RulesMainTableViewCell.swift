@@ -23,7 +23,8 @@ class RulesMainTableViewCell: UITableViewCell {
         obj.numberOfLines = 1
         obj.font = .systemFont(ofSize: 12)
         //obj.adjustsFontSizeToFitWidth = true
-        obj.textColor = UIColor(named: "accent")
+        obj.textColor = R.color.mainRed()
+        obj.text = "0 Rules"
         return obj
     }()
     
@@ -66,7 +67,6 @@ class RulesMainTableViewCell: UITableViewCell {
         addSubview(descriptionLabel)
         addSubview(image)
         
-        descriptionLabel.font = UIFont(name: "SF-Pro-Text-Bold", size: 30)
         
         headerLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(8)
@@ -94,10 +94,10 @@ class RulesMainTableViewCell: UITableViewCell {
         }
     }
     
-    func configure(with data: MainTableViewCell) {
+    func configure(with data: MainTableViewCell, and count: String) {
         self.headerLabel.text = data.header
-        self.counterLabel.text = data.counter
         self.descriptionLabel.text = data.description
+        self.counterLabel.text = data.counter
         self.image.image = UIImage(named: data.image)
     }
     
