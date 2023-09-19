@@ -11,7 +11,7 @@ class AdBlockListViewController: UIViewController {
 
     private let mainView = AdBlockListView()
 
-    private var blockedSites: [Site] = [Site(url: "ddfssfsd"), Site(url: "djhfsjdf")]
+    private var blockedSites: [Site] = [Site(url: "www.google.com"), Site(url: "www.pornhub.com")]
     
     override func loadView() {
         view = mainView
@@ -30,7 +30,6 @@ class AdBlockListViewController: UIViewController {
         mainView.listTableView.register(ListCell.self, forCellReuseIdentifier: ListCell.id)
         mainView.listTableView.allowsSelection = false
 
-        
         mainView.addButton.addTarget(self, action: #selector(addWebsite), for: .touchUpInside)
 
         self.title = "Block list"
@@ -43,13 +42,26 @@ class AdBlockListViewController: UIViewController {
         
         let alert = UIAlertController(title: "Add to Block LIst", message: "Enter the Site Name of the page you want to block", preferredStyle: .alert)
         let action = UIAlertAction(title: "Cancel", style: .cancel)
-        let block = UIAlertAction(title: "Block", style: .default)
+        let block = UIAlertAction(title: "Block", style: .default)  { [weak self] _ in
+       
+            if let text = alert.textFields?.first?.text {
+                
+                self?.handleEnteredText(text)
+            }
+        }
         alert.addAction(block)
         alert.addAction(action)
         alert.preferredAction = block
         alert.addTextField()
+      
         self.present(alert, animated: true)
     }
+    
+    func handleEnteredText(_ text: String) {
+        let newSite = Site(url: text)
+        blockedSites.append(newSite)
+        mainView.listTableView.reloadData()
+       }
     
 }
 

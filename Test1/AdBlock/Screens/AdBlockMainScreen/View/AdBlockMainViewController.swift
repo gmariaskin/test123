@@ -53,6 +53,8 @@ class AdBlockMainViewController: UIViewController {
         
         
         mainView.powerButton.addTarget(self, action: #selector(powerButtonTapped), for: .touchUpInside)
+        
+        self.navigationItem.backButtonDisplayMode = .minimal
     }
     
     private func presentGuide() {
@@ -122,14 +124,15 @@ extension AdBlockMainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-           let vc = AdBlockRulesViewController()
-            vc.delegate = self
-            navigationController?.pushViewController(AdBlockRulesViewController(), animated: true)
+            let vc = AdBlockRulesViewController()
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
             
         } else {
-  
-            navigationController?.pushViewController(AdBlockListViewController(), animated: true)
-       
+            let vc = AdBlockListViewController()
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     
@@ -138,6 +141,6 @@ extension AdBlockMainViewController: UITableViewDelegate {
 extension AdBlockMainViewController: RulesCounterDelegate {
     
     func countRules(with totalRules: Int){
-       
+        
     }
 }

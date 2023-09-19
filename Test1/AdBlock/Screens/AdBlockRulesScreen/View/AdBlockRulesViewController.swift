@@ -16,7 +16,7 @@ class AdBlockRulesViewController: UIViewController {
     //MARK: - Properties
     
     private let mainView = AdBlockRulesView()
-    weak var delegate: RulesCounterDelegate?
+
 
     
     //MARK: - Lifecycle
@@ -32,11 +32,11 @@ class AdBlockRulesViewController: UIViewController {
     
     
     private func setup() {
+        
         self.title = "Block rules"
         self.navigationController?.navigationBar.backIndicatorImage = R.image.leftArrow()
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage =  R.image.leftArrow()
         self.navigationController?.navigationBar.tintColor = R.color.mainRed()
-        
     }
     
 }
