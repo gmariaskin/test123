@@ -81,7 +81,7 @@ class NewTableViewCell: UITableViewCell {
         addSubview(delayLabel)
         addSubview(checkImage)
         
-        self.selectionStyle = .none
+     
         
         containerView.snp.makeConstraints {
             $0.horizontalEdges.equalToSuperview().inset(24)

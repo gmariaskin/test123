@@ -104,7 +104,7 @@ extension NewTableViewViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NewTableViewCell.id, for: indexPath) as? NewTableViewCell else { return UITableViewCell() }
-        cell.delegate = self
+       // cell.delegate = self
         var country: Country
         
         if state == .notPremium {
@@ -148,14 +148,15 @@ extension NewTableViewViewController: UITableViewDataSource {
 }
 
 //MARK: -  NewTableViewCellDelegate
-extension NewTableViewViewController: NewTableViewCellDelegate {
-    func didRemoveServer(cell: UITableViewCell) {
-        guard let newTableViewCell = cell as? NewTableViewCell else { return }
-        guard let index = mainView.tableView.indexPath(for: cell) else { return }
-        showAlert(title: countries[index.row].countryName!)
-        countries.remove(at: index.row)
-        mainView.tableView.reloadData()
-        
-    }
-}
-
+//extension NewTableViewViewController: NewTableViewCellDelegate {
+//    func didRemoveServer(cell: UITableViewCell) {
+//        guard let newTableViewCell = cell as? NewTableViewCell else { return }
+//        guard let index = mainView.tableView.indexPath(for: cell) else { return }
+//        showAlert(title: countries[index.row].countryName!)
+//        countries.remove(at: index.row)
+//        mainView.tableView.reloadData()
+//
+//    }
+//}
+//
+//

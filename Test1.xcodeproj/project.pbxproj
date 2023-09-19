@@ -56,6 +56,8 @@
 		F785A1482AB756FC009F3D09 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F785A1472AB756FC009F3D09 /* SF-Pro-Text-Regular.otf */; };
 		F785A14A2AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1492AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift */; };
 		F785A14D2AB8AF7E009F3D09 /* CustomRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A14C2AB8AF7E009F3D09 /* CustomRuleView.swift */; };
+		F785A1522AB9D381009F3D09 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1512AB9D381009F3D09 /* ListCell.swift */; };
+		F785A1542AB9D7CC009F3D09 /* SiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A1532AB9D7CC009F3D09 /* SiteModel.swift */; };
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
@@ -114,6 +116,8 @@
 		F785A1472AB756FC009F3D09 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		F785A1492AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdBlockCustomFeatureView.swift; path = Test1/AdBlock/Screens/AdBlockGuideScreen/View/AdBlockCustomFeatureView.swift; sourceTree = SOURCE_ROOT; };
 		F785A14C2AB8AF7E009F3D09 /* CustomRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRuleView.swift; sourceTree = "<group>"; };
+		F785A1512AB9D381009F3D09 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		F785A1532AB9D7CC009F3D09 /* SiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteModel.swift; sourceTree = "<group>"; };
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
@@ -512,6 +516,7 @@
 			children = (
 				F785A1242AB4B466009F3D09 /* AdBlockListViewController.swift */,
 				F785A1262AB4B47A009F3D09 /* AdBlockListView.swift */,
+				F785A1512AB9D381009F3D09 /* ListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 		F785A11B2AB4B3F0009F3D09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F785A1532AB9D7CC009F3D09 /* SiteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -765,6 +771,7 @@
 				17A322272AAB0FF800A155D6 /* CustomCell.swift in Sources */,
 				F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */,
 				17A322372AAB355600A155D6 /* MyTableView.swift in Sources */,
+				F785A1522AB9D381009F3D09 /* ListCell.swift in Sources */,
 				F785A0F12AAE0821009F3D09 /* NewCell.swift in Sources */,
 				178C6FEE2AA5E76F0038FA24 /* MainViewController.swift in Sources */,
 				F785A1402AB7352B009F3D09 /* AdBlockGuideViewController.swift in Sources */,
@@ -779,6 +786,7 @@
 				F785A1362AB5F15B009F3D09 /* SettingsViewController.swift in Sources */,
 				F785A12D2AB5ECF5009F3D09 /* TabBarController.swift in Sources */,
 				172B0B552AB88ED5009ECE59 /* MainButton.swift in Sources */,
+				F785A1542AB9D7CC009F3D09 /* SiteModel.swift in Sources */,
 				178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */,
 				178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */,
 				F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */,

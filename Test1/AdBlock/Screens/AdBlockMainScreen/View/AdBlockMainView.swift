@@ -20,7 +20,15 @@ class AdBlockMainView: UIView {
         return obj
     }()
     
-    let rulesTableView = UITableView(frame: .zero, style: .insetGrouped)
+ 
+    
+     let rulesTableView: UITableView = {
+        let obj = UITableView(frame: .zero, style: .insetGrouped)
+         obj.rowHeight = UITableView.automaticDimension
+         obj.backgroundColor = .clear
+         obj.separatorStyle = .none
+        return obj
+    }()
     
     
     let stateLabel: UILabel = {
@@ -56,8 +64,7 @@ class AdBlockMainView: UIView {
         addSubview(stateLabel)
         addSubview(rulesTableView)
         
-        rulesTableView.rowHeight = UITableView.automaticDimension
-        rulesTableView.backgroundColor = .clear
+ 
      
         powerButton.imageView?.contentMode = .scaleAspectFit
         

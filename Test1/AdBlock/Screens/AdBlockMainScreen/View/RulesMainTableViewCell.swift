@@ -11,6 +11,11 @@ class RulesMainTableViewCell: UITableViewCell {
     
     static let id = String(describing: RulesMainTableViewCell.self)
 
+    private let containerView: UIView = {
+        let obj = UIView()
+        return obj
+    }()
+    
     private let headerLabel: UILabel = {
         let obj = UILabel()
         obj.textColor = .white
@@ -53,15 +58,23 @@ class RulesMainTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
+        contentView.backgroundColor = R.color.darkGray()
+        contentView.layer.cornerRadius = 17
+    }
+    
     //MARK: - Actions
     
     private func setup(){
         
         
-        contentView.layer.cornerRadius = contentView.frame.height / 2
-        contentView.backgroundColor = .black
-        contentView.clipsToBounds = true
+        selectionStyle = .none
         
+        
+        layoutSubviews()
+        contentView.addSubview(containerView)
         addSubview(headerLabel)
         addSubview(counterLabel)
         addSubview(descriptionLabel)
