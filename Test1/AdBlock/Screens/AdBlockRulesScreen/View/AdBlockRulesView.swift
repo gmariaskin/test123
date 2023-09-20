@@ -9,25 +9,20 @@ import UIKit
 
 class AdBlockRulesView: UIView {
   
-    private let rule1 = CustomRuleView(rule: "Block all", number: 1252, description: "All rules will be activated", image: R.image.blockAll()!)
-    private let rule2 = CustomRuleView(rule: "Remove ads", number: 333, description: "Blocking ads in any form", image: R.image.removeAds()!)
-    private let rule3 = CustomRuleView(rule: "Block trackers", number: 1000, description: "Tracking software blocking", image: R.image.blockTrackers()!)
-    private let rule4 = CustomRuleView(rule: "Block adult", number: 525, description: "Blocking ads of a sexual nature", image: R.image.blockAdults()!)
+ 
+    //MARK: - Properties
     
-    var numberOfRules: Int = 0 
+    var numberOfRules: Int = 0
     
-    lazy var vStackView: UIStackView = {
-        let obj = UIStackView(arrangedSubviews: [
-            rule1,
-            rule2,
-            rule3,
-            rule4
-        ])
-        obj.axis = .vertical
-        obj.distribution = .equalSpacing
-        obj.spacing = 10
+    let ruleTableView: UITableView = {
+        let obj = UITableView(frame: .zero, style: .insetGrouped)
+        obj.rowHeight = UITableView.automaticDimension
+        obj.backgroundColor = .clear
+        obj.separatorStyle = .none
         return obj
     }()
+    
+    //MARK: - Lifecycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,15 +33,19 @@ class AdBlockRulesView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Actions
+    
     private func setup() {
         
         backgroundColor = R.color.bg()
 
-        addSubview(vStackView)
+        addSubview(ruleTableView)
         
-        vStackView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(113)
-            make.horizontalEdges.equalToSuperview().inset(20)
+        ruleTableView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(90)
+            make.horizontalEdges.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview().inset(-50)
+            
         }
         
   

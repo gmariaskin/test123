@@ -59,7 +59,7 @@ class AdBlockListViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorImage = R.image.leftArrow()
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage =  R.image.leftArrow()
         self.navigationController?.navigationBar.tintColor = R.color.mainRed()
-       
+        
     }
     
     @objc func addWebsite() {
@@ -139,10 +139,7 @@ extension AdBlockListViewController: UITableViewDataSource {
         alert.preferredAction = delete
         self.present(alert, animated: true)
     }
+    
+}
 
-    
-    
-    
-    }
-    
 

@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol RulesCounterDelegate: AnyObject {
-    func countRules(with totalRules: Int)
+protocol ProtocolDelegateRules: AnyObject {
+    func countRules()
 }
 
 class AdBlockRulesViewController: UIViewController {
@@ -16,13 +16,17 @@ class AdBlockRulesViewController: UIViewController {
     //MARK: - Properties
     
     private let mainView = AdBlockRulesView()
-
-
+    
+    weak var delegate: ProtocolDelegateRules?
     
     //MARK: - Lifecycle
     
     override func loadView() {
         view = mainView
+        
+        mainView.ruleTableView.dataSource = self
+        mainView.ruleTableView.delegate = self
+        mainView.ruleTableView.register(RulesCell.self, forCellReuseIdentifier: RulesCell.id)
     }
     
     override func viewDidLoad() {
@@ -41,3 +45,40 @@ class AdBlockRulesViewController: UIViewController {
     
 }
 
+//MARK: - UITableViewDelegate
+
+extension AdBlockRulesViewController: UITableViewDelegate {
+    
+}
+
+//MARK: - UITableViewDataSource
+
+extension AdBlockRulesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        rulesArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RulesCell.id, for: indexPath) as? RulesCell else { return UITableViewCell()}
+        cell.configure(with: rulesArray[indexPath.row])
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 62
+    }
+    
+    
+}
+
+//MARK: - Model
+
+private let rulesArray: [Rule] = [Rule(rule: "Block all", number: 1252, description: "All rules will be activated", image: R.image.blockAll()!),
+                                  Rule(rule: "Remove ads", number: 333, description: "Blocking ads in any form", image: R.image.removeAds()!),
+                                  Rule(rule: "Block trackers", number: 1000, description: "Tracking software blocking", image: R.image.blockTrackers()!),
+                                  Rule(rule: "Block adult", number: 525, description: "Blocking ads of a sexual nature", image: R.image.blockAdults()!)]

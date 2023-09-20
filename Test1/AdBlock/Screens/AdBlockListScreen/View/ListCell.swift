@@ -78,19 +78,20 @@ class ListCell: UITableViewCell {
     
     private func setup() {
         
-        backgroundColor = R.color.bg()
+        backgroundColor = R.color.darkGray()
         
         layoutSubviews()
         contentView.addSubview(containerView)
-        addSubview(vStack)
-        addSubview(deleteButton)
-        addSubview(globeImage)
+        containerView.addSubview(vStack)
+        containerView.addSubview(deleteButton)
+        containerView.addSubview(globeImage)
+   
         
         self.selectionStyle = .none
         
-        containerView.snp.makeConstraints {
-            $0.horizontalEdges.equalToSuperview().inset(2)
-            $0.verticalEdges.equalToSuperview().inset(2)
+        containerView.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(2)
+            make.verticalEdges.equalToSuperview().inset(2)
         }
          
         globeImage.snp.makeConstraints { make in

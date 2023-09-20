@@ -24,6 +24,8 @@
 		17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322342AAB349F00A155D6 /* MyCollectionView.swift */; };
 		17A322372AAB355600A155D6 /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322362AAB355600A155D6 /* MyTableView.swift */; };
 		C3249B0A3CBD6D5FDF79032F /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */; };
+		F7135A432ABB0FC400B7D1A2 /* RulesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7135A422ABB0FC400B7D1A2 /* RulesCell.swift */; };
+		F7135A462ABB107300B7D1A2 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7135A452ABB107300B7D1A2 /* RuleModel.swift */; };
 		F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0E92AAE04E5009F3D09 /* CollectionViewModel.swift */; };
 		F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */; };
 		F785A0EE2AAE07C4009F3D09 /* NewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */; };
@@ -84,6 +86,8 @@
 		17A322362AAB355600A155D6 /* MyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
 		389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E8619F604E83CC1AA72494 /* Pods-Test1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.debug.xcconfig"; path = "Target Support Files/Pods-Test1/Pods-Test1.debug.xcconfig"; sourceTree = "<group>"; };
+		F7135A422ABB0FC400B7D1A2 /* RulesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesCell.swift; sourceTree = "<group>"; };
+		F7135A452ABB107300B7D1A2 /* RuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleModel.swift; sourceTree = "<group>"; };
 		F785A0E92AAE04E5009F3D09 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionView.swift; sourceTree = "<group>"; };
 		F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionViewController.swift; sourceTree = "<group>"; };
@@ -526,6 +530,7 @@
 			children = (
 				F785A1282AB4B493009F3D09 /* AdBlockRulesView.swift */,
 				F785A12A2AB4B4A2009F3D09 /* AdBlockRulesViewController.swift */,
+				F7135A422ABB0FC400B7D1A2 /* RulesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +546,7 @@
 		F785A11C2AB4B3F5009F3D09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7135A452ABB107300B7D1A2 /* RuleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -763,11 +769,13 @@
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
 				F785A1272AB4B47A009F3D09 /* AdBlockListView.swift in Sources */,
 				F785A1442AB7356D009F3D09 /* AdBlockGuideView.swift in Sources */,
+				F7135A462ABB107300B7D1A2 /* RuleModel.swift in Sources */,
 				F785A1342AB5F150009F3D09 /* VoiceRecViewController.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
 				F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */,
 				F785A1322AB5F13A009F3D09 /* CallRecViewController.swift in Sources */,
 				F785A1032AAF723B009F3D09 /* HeaderView.swift in Sources */,
+				F7135A432ABB0FC400B7D1A2 /* RulesCell.swift in Sources */,
 				17A322272AAB0FF800A155D6 /* CustomCell.swift in Sources */,
 				F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */,
 				17A322372AAB355600A155D6 /* MyTableView.swift in Sources */,

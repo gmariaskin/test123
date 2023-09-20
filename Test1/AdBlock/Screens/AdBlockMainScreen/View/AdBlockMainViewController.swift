@@ -127,6 +127,7 @@ extension AdBlockMainViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             let vc = AdBlockRulesViewController()
             vc.hidesBottomBarWhenPushed = true
+            vc.delegate = self
             navigationController?.pushViewController(vc, animated: true)
             
         } else {
@@ -150,4 +151,13 @@ extension AdBlockMainViewController: ProtocolDelegateList {
         mainViewCells[1].counter = "\(numberOfSites) websites"
         self.mainView.rulesTableView.reloadData()
     }
+}
+
+extension AdBlockMainViewController: ProtocolDelegateRules {
+    
+    func countRules() {
+        
+    }
+    
+    
 }
