@@ -9,10 +9,15 @@ import UIKit
 
 class RulesCell: UITableViewCell {
     
-    
     //MARK: - Properties
-    
     static let id = String(describing: RulesCell.self)
+    
+    private let containerView : UIImageView = {
+        let obj = UIImageView()
+        obj.backgroundColor = R.color.darkGray()
+        obj.layer.cornerRadius = 14
+        return obj
+    }()
     
     private let ruleImage : UIImageView = {
         let obj = UIImageView()
@@ -45,12 +50,7 @@ class RulesCell: UITableViewCell {
         return obj
     }()
     
-    private let containerView : UIImageView = {
-        let obj = UIImageView()
-        return obj
-    }()
-    
-    lazy var vStack: UIStackView = {
+    private lazy var vStack: UIStackView = {
         let obj = UIStackView(arrangedSubviews: [ruleName, counterLabel, descriptionLabel])
         obj.axis = .vertical
         obj.spacing = 2
@@ -69,30 +69,20 @@ class RulesCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
-        contentView.backgroundColor = R.color.darkGray()
-        contentView.layer.cornerRadius = 14
-    }
-    
     //MARK: - Actions
     
     private func setup() {
+        backgroundColor = .clear
+        selectionStyle = .none
         
-        backgroundColor = R.color.darkGray()
-        
-        layoutSubviews()
         contentView.addSubview(containerView)
-        addSubview(ruleImage)
-        addSubview(onSwitch)
-        addSubview(vStack)
-        
-        self.selectionStyle = .none
+        containerView.addSubview(ruleImage)
+        containerView.addSubview(onSwitch)
+        containerView.addSubview(vStack)
         
         containerView.snp.makeConstraints {
-            $0.horizontalEdges.equalToSuperview().inset(10)
-            $0.verticalEdges.equalToSuperview().inset(10)
+            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.verticalEdges.equalToSuperview().inset(4)
         }
          
         ruleImage.snp.makeConstraints { make in
@@ -102,21 +92,19 @@ class RulesCell: UITableViewCell {
         
         vStack.snp.makeConstraints { make in
             make.leading.equalTo(ruleImage.snp.trailing).offset(16)
-            make.centerY.equalToSuperview()
+            make.verticalEdges.equalToSuperview().inset(5)
         }
         
         onSwitch.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(16)
-            make.verticalEdges.equalToSuperview().inset(15.5)
+            make.centerY.equalToSuperview()
         }
-        
     }
     
-    func configure(with rule: Rule ) {
+    func configure(with rule: Rule) {
         self.ruleName.text = rule.rule
         self.counterLabel.text = "\(rule.number ?? 0)" + " Rules"
         self.descriptionLabel.text = rule.description
         self.ruleImage.image = rule.image
     }
-    
 }

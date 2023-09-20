@@ -15,7 +15,7 @@ class AdBlockRulesView: UIView {
     var numberOfRules: Int = 0
     
     let ruleTableView: UITableView = {
-        let obj = UITableView(frame: .zero, style: .insetGrouped)
+        let obj = UITableView()
         obj.rowHeight = UITableView.automaticDimension
         obj.backgroundColor = .clear
         obj.separatorStyle = .none
