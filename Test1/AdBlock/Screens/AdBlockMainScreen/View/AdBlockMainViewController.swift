@@ -12,6 +12,7 @@ class AdBlockMainViewController: UIViewController {
     //MARK: - Properties
     var totalRules: String = "0"
     private let mainView = AdBlockMainView()
+    private var blockedSitesArray: [Site] = []
     
     //MARK: - Lifecycle
     
@@ -75,12 +76,12 @@ class AdBlockMainViewController: UIViewController {
 
 struct MainTableViewCell {
     let header: String
-    let counter: String
+    var counter: String
     let description: String
     let image: String
 }
 
-private let mainViewCells: [MainTableViewCell] = [
+  var mainViewCells: [MainTableViewCell] = [
     
     MainTableViewCell(header: "Block rules", counter: "0 rules", description: "Pesonalize the blocklist for a more comfortable experience", image: "block"),
     MainTableViewCell(header: "Block list", counter: "0 websites", description: "Manually enter a list of websites you wish to block", image: "list")
@@ -129,8 +130,9 @@ extension AdBlockMainViewController: UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
             
         } else {
-            let vc = AdBlockListViewController()
+            let vc = AdBlockListViewController(blockedSites: blockedSitesArray)
             vc.hidesBottomBarWhenPushed = true
+            vc.delegate = self
             navigationController?.pushViewController(vc, animated: true)
             
         }
@@ -138,9 +140,14 @@ extension AdBlockMainViewController: UITableViewDelegate {
     
 }
 
-extension AdBlockMainViewController: RulesCounterDelegate {
+extension AdBlockMainViewController: ProtocolDelegateList {
+    func saveBlockedSites(with sites: [Site]) {
+        self.blockedSitesArray = sites
+    }
     
-    func countRules(with totalRules: Int){
-        
+    
+    func countSites(with numberOfSites: Int) {
+        mainViewCells[1].counter = "\(numberOfSites) websites"
+        self.mainView.rulesTableView.reloadData()
     }
 }

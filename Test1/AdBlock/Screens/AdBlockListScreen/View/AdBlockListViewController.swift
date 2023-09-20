@@ -7,15 +7,32 @@
 
 import UIKit
 
+protocol ProtocolDelegateList: AnyObject {
+    func countSites(with numberOfSites: Int)
+    func saveBlockedSites(with sites: [Site])
+}
+
 class AdBlockListViewController: UIViewController {
     
     //MARK: - Properties
     
     private let mainView = AdBlockListView()
     
-    private var blockedSites: [Site] = []
+    private var blockedSites: [Site]
     
-    //MARK: - Actions
+    weak var delegate: ProtocolDelegateList?
+    
+    //MARK: - Lifecycle
+    
+    init(blockedSites: [Site], delegate: ProtocolDelegateList? = nil) {
+        self.blockedSites = blockedSites
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         view = mainView
@@ -26,6 +43,7 @@ class AdBlockListViewController: UIViewController {
         setup()
     }
     
+    //MARK: - Actions
     
     private func setup() {
         
@@ -41,6 +59,7 @@ class AdBlockListViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorImage = R.image.leftArrow()
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage =  R.image.leftArrow()
         self.navigationController?.navigationBar.tintColor = R.color.mainRed()
+       
     }
     
     @objc func addWebsite() {
@@ -65,6 +84,8 @@ class AdBlockListViewController: UIViewController {
     func handleEnteredText(_ text: String) {
         let newSite = Site(url: text)
         blockedSites.append(newSite)
+        self.delegate?.countSites(with: blockedSites.count)
+        self.delegate?.saveBlockedSites(with: blockedSites)
         mainView.listTableView.reloadData()
     }
     
@@ -108,6 +129,8 @@ extension AdBlockListViewController: UITableViewDataSource {
             if let cell = sender.superview as? ListCell,
                let indexPath = self?.mainView.listTableView.indexPath(for: cell) {
                 self?.blockedSites.remove(at: indexPath.row)
+                self?.delegate?.countSites(with: self?.blockedSites.count ?? 1)
+                self?.delegate?.saveBlockedSites(with: self?.blockedSites ?? [])
                 self?.mainView.listTableView.reloadData()
             }
         }

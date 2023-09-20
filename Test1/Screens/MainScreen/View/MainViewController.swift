@@ -68,7 +68,6 @@ extension MainViewController {
 //MARK: ProtocolDelegate
 extension MainViewController: ProtocolDelegate {
     func countryHandler(with item: Country, state: Bool) {
-        print(item.countryName)
         DispatchQueue.main.async {
             self.mainView.titleLabel.text = item.countryName
         }
