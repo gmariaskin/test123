@@ -45,8 +45,9 @@ class RulesCell: UITableViewCell {
         return obj
     }()
     
-    private let onSwitch : UISwitch = {
+     let onSwitch : UISwitch = {
         let obj = UISwitch()
+        obj.onTintColor = R.color.mainRed()
         return obj
     }()
     
@@ -77,14 +78,14 @@ class RulesCell: UITableViewCell {
         
         contentView.addSubview(containerView)
         containerView.addSubview(ruleImage)
-        containerView.addSubview(onSwitch)
+        addSubview(onSwitch)
         containerView.addSubview(vStack)
         
         containerView.snp.makeConstraints {
             $0.horizontalEdges.equalToSuperview().inset(20)
             $0.verticalEdges.equalToSuperview().inset(4)
         }
-         
+        
         ruleImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
             make.centerY.equalToSuperview()
@@ -96,7 +97,7 @@ class RulesCell: UITableViewCell {
         }
         
         onSwitch.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(16)
+            make.trailing.equalTo(containerView.snp.trailing).inset(16)
             make.centerY.equalToSuperview()
         }
     }
@@ -107,4 +108,5 @@ class RulesCell: UITableViewCell {
         self.descriptionLabel.text = rule.description
         self.ruleImage.image = rule.image
     }
+
 }

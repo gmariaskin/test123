@@ -54,7 +54,6 @@ class AdBlockListViewController: UIViewController {
         
         mainView.addButton.addTarget(self, action: #selector(addWebsite), for: .touchUpInside)
         
-        
         self.title = "Block list"
         self.navigationController?.navigationBar.backIndicatorImage = R.image.leftArrow()
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage =  R.image.leftArrow()

@@ -9,10 +9,19 @@ import UIKit
 
 class AdBlockMainViewController: UIViewController {
     
+    //MARK: - Model
+    
+    var mainViewCells: [MainTableViewCell] = [
+        
+        MainTableViewCell(header: "Block rules", counter: "0 rules", description: "Pesonalize the blocklist for a more comfortable experience", image: "block"),
+        MainTableViewCell(header: "Block list", counter: "0 websites", description: "Manually enter a list of websites you wish to block", image: "list")
+    ]
+    
     //MARK: - Properties
-    var totalRules: String = "0"
+   
     private let mainView = AdBlockMainView()
     private var blockedSitesArray: [Site] = []
+    private var blockedRules: Int = 0
     
     //MARK: - Lifecycle
     
@@ -81,11 +90,7 @@ struct MainTableViewCell {
     let image: String
 }
 
-  var mainViewCells: [MainTableViewCell] = [
-    
-    MainTableViewCell(header: "Block rules", counter: "0 rules", description: "Pesonalize the blocklist for a more comfortable experience", image: "block"),
-    MainTableViewCell(header: "Block list", counter: "0 websites", description: "Manually enter a list of websites you wish to block", image: "list")
-]
+
 
 //MARK: - UITableViewDataSource
 
@@ -96,7 +101,11 @@ extension AdBlockMainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RulesMainTableViewCell.id, for: indexPath) as? RulesMainTableViewCell else { return UITableViewCell()}
-        cell.configure(with: mainViewCells[indexPath.row], and: totalRules)
+        if indexPath.row == 0 {
+            cell.configure(with: mainViewCells[indexPath.row])
+        } else {
+            cell.configure(with: mainViewCells[indexPath.row])
+        }
         return cell
     }
     
@@ -141,11 +150,13 @@ extension AdBlockMainViewController: UITableViewDelegate {
     
 }
 
+//MARK: - ProtocolDelegateList
+
 extension AdBlockMainViewController: ProtocolDelegateList {
+    
     func saveBlockedSites(with sites: [Site]) {
         self.blockedSitesArray = sites
     }
-    
     
     func countSites(with numberOfSites: Int) {
         mainViewCells[1].counter = "\(numberOfSites) websites"
@@ -153,10 +164,13 @@ extension AdBlockMainViewController: ProtocolDelegateList {
     }
 }
 
+//MARK: - ProtocolDelegateRules
+
 extension AdBlockMainViewController: ProtocolDelegateRules {
     
-    func countRules() {
-        
+    func countRules(with total: Int) {
+        self.mainViewCells[0].counter = "\(total) websites"
+        self.mainView.rulesTableView.reloadData()
     }
     
     

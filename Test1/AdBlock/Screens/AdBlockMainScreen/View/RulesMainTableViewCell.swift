@@ -107,7 +107,7 @@ class RulesMainTableViewCell: UITableViewCell {
         }
     }
     
-    func configure(with data: MainTableViewCell, and count: String) {
+    func configure(with data: MainTableViewCell) {
         self.headerLabel.text = data.header
         self.descriptionLabel.text = data.description
         self.counterLabel.text = data.counter

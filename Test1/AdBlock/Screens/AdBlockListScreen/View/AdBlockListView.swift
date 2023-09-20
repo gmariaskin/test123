@@ -16,7 +16,7 @@ class AdBlockListView: UIView {
     }()
     
     let listTableView: UITableView = {
-        let obj = UITableView(frame: .zero, style: .insetGrouped)
+        let obj = UITableView()
         obj.backgroundColor = R.color.bg()
         obj.rowHeight = UITableView.automaticDimension
         obj.separatorStyle = .none

@@ -30,8 +30,8 @@
             filePath = "Test1/AdBlock/Screens/AdBlockListScreen/View/AdBlockListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "deleteSite(_:)"
             landmarkType = "7">
             <Locations>
@@ -78,8 +78,8 @@
             filePath = "Test1/AdBlock/Screens/AdBlockListScreen/View/AdBlockListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "deleteSite(_:)"
             landmarkType = "7">
             <Locations>
@@ -111,6 +111,36 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "110"
                   endingLineNumber = "110"
+                  offsetFromSymbolStart = "1085">
+               </Location>
+               <Location
+                  uuid = "05DE677C-1432-4144-B671-E9D70B53FA4D - 5c9dc5e0e0669da1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in Test1.AdBlockListViewController.deleteSite(__C.UIButton) -&gt; ()"
+                  moduleName = "Test1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gleb/Desktop/test123/Test1/AdBlock/Screens/AdBlockListScreen/View/AdBlockListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "521">
+               </Location>
+               <Location
+                  uuid = "05DE677C-1432-4144-B671-E9D70B53FA4D - 5c9dc5e0e0669da1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in Test1.AdBlockListViewController.deleteSite(__C.UIButton) -&gt; ()"
+                  moduleName = "Test1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gleb/Desktop/test123/Test1/AdBlock/Screens/AdBlockListScreen/View/AdBlockListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
                   offsetFromSymbolStart = "1085">
                </Location>
             </Locations>

@@ -13,8 +13,10 @@ class ListCell: UITableViewCell {
     
     static let id = String(describing: ListCell.self)
     
-    private let containerView: UIView = {
-        let obj = UIView()
+    private let containerView : UIImageView = {
+        let obj = UIImageView()
+        obj.backgroundColor = R.color.darkGray()
+        obj.layer.cornerRadius = 14
         return obj
     }()
     
@@ -78,20 +80,21 @@ class ListCell: UITableViewCell {
     
     private func setup() {
         
-        backgroundColor = R.color.darkGray()
+        backgroundColor = .clear
+   
+        
         
         layoutSubviews()
         contentView.addSubview(containerView)
         containerView.addSubview(vStack)
-        containerView.addSubview(deleteButton)
+      addSubview(deleteButton)
         containerView.addSubview(globeImage)
-   
         
         self.selectionStyle = .none
         
-        containerView.snp.makeConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(2)
-            make.verticalEdges.equalToSuperview().inset(2)
+        containerView.snp.makeConstraints {
+            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.verticalEdges.equalToSuperview().inset(4)
         }
          
         globeImage.snp.makeConstraints { make in
