@@ -20,13 +20,11 @@ class AdBlockMainView: UIView {
         return obj
     }()
     
- 
-    
-     let rulesTableView: UITableView = {
+    let rulesTableView: UITableView = {
         let obj = UITableView(frame: .zero, style: .insetGrouped)
-         obj.rowHeight = UITableView.automaticDimension
-         obj.backgroundColor = .clear
-         obj.separatorStyle = .none
+        obj.rowHeight = UITableView.automaticDimension
+        obj.backgroundColor = .clear
+        obj.separatorStyle = .none
         return obj
     }()
     
@@ -35,11 +33,12 @@ class AdBlockMainView: UIView {
         let obj = UILabel()
         obj.textAlignment = .center
         obj.font = .systemFont(ofSize: 22, weight: .bold)
+        obj.textColor = R.color.mainGray()
         obj.halfTextColorChange(fullText: "AD BLOCK IS TURNED OFF", changeText: "TURNED OFF")
         return obj
     }()
     
- 
+    
     
     //MARK: - LifeCycle
     
@@ -64,32 +63,34 @@ class AdBlockMainView: UIView {
         addSubview(stateLabel)
         addSubview(rulesTableView)
         
- 
-     
         powerButton.imageView?.contentMode = .scaleAspectFit
+        stateLabel.adjustsFontSizeToFitWidth = true
         
-        powerButton.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(63)
-            make.top.equalToSuperview().inset(194)
-            make.bottom.equalToSuperview().inset(429)
-        }
         
         stateLabel.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(58)
-            make.top.equalToSuperview().inset(115)
-            make.bottom.equalToSuperview().inset(709)
             make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(58)
+            make.top.equalTo(safeAreaInsets.top).offset(115)
         }
         
-        rulesTableView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.top.equalToSuperview().inset(505)
-            make.height.equalTo(236)
-            make.bottom.equalToSuperview().inset(141)
+        powerButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(62)
+            make.top.equalToSuperview().offset(194)
+            make.height.equalTo(229)
+            make.width.equalTo(268)
+            
         }
+        
+          rulesTableView.snp.makeConstraints { make in
+              make.centerX.equalToSuperview()
+              make.leading.trailing.equalToSuperview().inset(20)
+              make.height.equalTo(236)
+              make.top.greaterThanOrEqualTo(powerButton.snp.bottom).offset(82)
+          }
     }
     
-   
+    
     
 }
 

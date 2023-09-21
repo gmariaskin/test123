@@ -27,7 +27,6 @@ class RulesMainTableViewCell: UITableViewCell {
         let obj = UILabel()
         obj.numberOfLines = 1
         obj.font = .systemFont(ofSize: 12)
-        //obj.adjustsFontSizeToFitWidth = true
         obj.textColor = R.color.mainRed()
         obj.text = "0 Rules"
         return obj

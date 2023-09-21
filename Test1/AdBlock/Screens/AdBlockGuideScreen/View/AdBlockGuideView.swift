@@ -13,7 +13,6 @@ class AdBlockGuideView: UIView {
     let skipButton: UIButton = {
         let obj = UIButton()
         obj.setTitle("Skip", for: .normal)
-      //  obj.setTitleColor(R.color.mainRed(), for: .normal)
         return obj
     }()
     
@@ -107,9 +106,9 @@ class AdBlockGuideView: UIView {
             make.horizontalEdges.equalToSuperview().inset(46)
         }
         
-        vStackView.snp.makeConstraints {
-            $0.top.equalTo(subLabel.snp.bottom).offset(14)
-            $0.horizontalEdges.equalToSuperview().inset(20)
+        vStackView.snp.makeConstraints { make in
+            make.top.equalTo(subLabel.snp.bottom).offset(14)
+            make.horizontalEdges.equalToSuperview().inset(20)
         }
         
         goToButton.snp.makeConstraints { make in
@@ -118,15 +117,16 @@ class AdBlockGuideView: UIView {
             make.top.equalTo(vStackView.snp.bottom).offset(28)
         }
         
-        switcher.snp.makeConstraints {
-            $0.top.equalTo(goToButton.snp.bottom).offset(16)
-            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-15)
-            $0.trailing.equalToSuperview().offset(-20)
+        switcher.snp.makeConstraints { make in
+            make.top.equalTo(goToButton.snp.bottom).offset(16)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-15)
+            make.trailing.equalToSuperview().offset(-20)
         }
         
-        dontShowAgainLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20)
-            $0.centerY.equalTo(switcher.snp.centerY)
+        dontShowAgainLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(20)
+            make.top.equalTo(goToButton.snp.bottom).offset(16)
+            make.centerY.equalTo(switcher.snp.centerY)
         }
     }
     
