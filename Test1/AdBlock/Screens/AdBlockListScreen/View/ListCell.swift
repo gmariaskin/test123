@@ -20,14 +20,14 @@ class ListCell: UITableViewCell {
         return obj
     }()
     
-     let nameLabel: UILabel = {
+    let nameLabel: UILabel = {
         let obj = UILabel()
         obj.font = .systemFont(ofSize: 17)
         obj.textColor = .white
         return obj
     }()
     
-    private let urlLabel: UILabel = {
+     let urlLabel: UILabel = {
         let obj = UILabel()
         obj.font = .systemFont(ofSize: 12)
         obj.textColor = R.color.mainGray()
@@ -42,9 +42,9 @@ class ListCell: UITableViewCell {
         return obj
     }()
     
-     let deleteButton : UIButton = {
+    let deleteButton : UIButton = {
         let obj = UIButton()
-         obj.setImage(R.image.trash(), for: .normal)
+        obj.setImage(R.image.trash(), for: .normal)
         return obj
     }()
     
@@ -81,13 +81,11 @@ class ListCell: UITableViewCell {
     private func setup() {
         
         backgroundColor = .clear
-   
-        
         
         layoutSubviews()
         contentView.addSubview(containerView)
         containerView.addSubview(vStack)
-      addSubview(deleteButton)
+        addSubview(deleteButton)
         containerView.addSubview(globeImage)
         
         self.selectionStyle = .none
@@ -96,7 +94,7 @@ class ListCell: UITableViewCell {
             $0.horizontalEdges.equalToSuperview().inset(20)
             $0.verticalEdges.equalToSuperview().inset(4)
         }
-         
+        
         globeImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(20)
             make.centerY.equalToSuperview()

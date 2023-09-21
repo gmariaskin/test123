@@ -30,8 +30,8 @@
             filePath = "Test1/AdBlock/Screens/AdBlockListScreen/View/AdBlockListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "deleteSite(_:)"
             landmarkType = "7">
             <Locations>
@@ -78,8 +78,8 @@
             filePath = "Test1/AdBlock/Screens/AdBlockListScreen/View/AdBlockListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "deleteSite(_:)"
             landmarkType = "7">
             <Locations>

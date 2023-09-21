@@ -50,7 +50,7 @@ class AdBlockListViewController: UIViewController {
         mainView.listTableView.dataSource = self
         mainView.listTableView.delegate = self
         mainView.listTableView.register(ListCell.self, forCellReuseIdentifier: ListCell.id)
-        mainView.listTableView.allowsSelection = false
+        mainView.listTableView.allowsSelection = true
         
         mainView.addButton.addTarget(self, action: #selector(addWebsite), for: .touchUpInside)
         
@@ -117,6 +117,13 @@ extension AdBlockListViewController: UITableViewDataSource {
         cell.deleteButton.addTarget(self, action: #selector(deleteSite(_:)), for: .touchUpInside)
         cell.nameLabel.text = "Site_\(indexPath.row + 1)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ListCell
+        if let labelText = cell.urlLabel.text {
+                     print("Selected cell label text: \(labelText)")
+                 }
     }
     
     @objc func deleteSite(_ sender: UIButton) {
