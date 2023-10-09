@@ -63,6 +63,15 @@
 		F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA102AA709B000933335 /* SecondViewController.swift */; };
 		F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA122AA709BC00933335 /* SecondView.swift */; };
 		F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */; };
+		F7E62AD82ACEB18000A7E485 /* PlusMainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E62AD72ACEB18000A7E485 /* PlusMainScreenViewController.swift */; };
+		F7E62ADC2ACEB1A700A7E485 /* PlusMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E62ADB2ACEB1A700A7E485 /* PlusMainView.swift */; };
+		F7E62AE02ACEB9F300A7E485 /* PlusMainCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E62ADF2ACEB9F300A7E485 /* PlusMainCellTableViewCell.swift */; };
+		F7E62AE32ACEBA3800A7E485 /* PlusMainCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E62AE22ACEBA3800A7E485 /* PlusMainCellModel.swift */; };
+		F7E746F12AD43751004589ED /* ScreenMirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E746F02AD43751004589ED /* ScreenMirrorViewController.swift */; };
+		F7E746F42AD4376E004589ED /* ScreenMirrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E746F32AD4376E004589ED /* ScreenMirrorView.swift */; };
+		F7FB37CC2ACA9F37005C9535 /* TVMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB37CB2ACA9F37005C9535 /* TVMainViewController.swift */; };
+		F7FB37CE2ACA9F5C005C9535 /* TVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB37CD2ACA9F5C005C9535 /* TVMainView.swift */; };
+		F7FB37D02ACAA01E005C9535 /* ConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB37CF2ACAA01E005C9535 /* ConnectButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +134,15 @@
 		F7A8FA102AA709B000933335 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8FA122AA709BC00933335 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		F7A8FA142AA70A3800933335 /* SecondScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenModel.swift; sourceTree = "<group>"; };
+		F7E62AD72ACEB18000A7E485 /* PlusMainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMainScreenViewController.swift; sourceTree = "<group>"; };
+		F7E62ADB2ACEB1A700A7E485 /* PlusMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMainView.swift; sourceTree = "<group>"; };
+		F7E62ADF2ACEB9F300A7E485 /* PlusMainCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMainCellTableViewCell.swift; sourceTree = "<group>"; };
+		F7E62AE22ACEBA3800A7E485 /* PlusMainCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMainCellModel.swift; sourceTree = "<group>"; };
+		F7E746F02AD43751004589ED /* ScreenMirrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMirrorViewController.swift; sourceTree = "<group>"; };
+		F7E746F32AD4376E004589ED /* ScreenMirrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMirrorView.swift; sourceTree = "<group>"; };
+		F7FB37CB2ACA9F37005C9535 /* TVMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMainViewController.swift; sourceTree = "<group>"; };
+		F7FB37CD2ACA9F5C005C9535 /* TVMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMainView.swift; sourceTree = "<group>"; };
+		F7FB37CF2ACAA01E005C9535 /* ConnectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,14 +201,8 @@
 		178C6FFE2AA5E8D80038FA24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F785A1042AB3394E009F3D09 /* BlockCollectionViewScreen */,
-				F785A0F62AAF5468009F3D09 /* NewTableViewScreen */,
-				F785A0E62AAE028B009F3D09 /* NewCollectionScreen */,
-				17A3222D2AAB2AC200A155D6 /* CollectionScreen */,
-				17A322212AAB0F6400A155D6 /* TableViewScreen */,
-				178C70042AA5EA3B0038FA24 /* MainScreen */,
-				F7A8FA0D2AA669FE00933335 /* SecondScreen */,
-				178C70032AA5EA210038FA24 /* LaunchScreen */,
+				F7E62AD62ACEB15800A7E485 /* NEW */,
+				F7E62AD52ACEB14700A7E485 /* OLD  */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -312,6 +324,7 @@
 				F785A1492AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift */,
 				172B0B542AB88ED5009ECE59 /* MainButton.swift */,
 				F785A14C2AB8AF7E009F3D09 /* CustomRuleView.swift */,
+				F7FB37CF2ACAA01E005C9535 /* ConnectButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -477,6 +490,7 @@
 		F785A1132AB4B365009F3D09 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F7FB37C82ACA9F0C005C9535 /* TVScreen */,
 				F785A1412AB7353B009F3D09 /* AdBlockGuideScreen */,
 				F785A1302AB5F11E009F3D09 /* BlankVC */,
 				F785A12E2AB5ECFC009F3D09 /* TabBarController */,
@@ -637,6 +651,91 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F7E62AD52ACEB14700A7E485 /* OLD  */ = {
+			isa = PBXGroup;
+			children = (
+				F785A1042AB3394E009F3D09 /* BlockCollectionViewScreen */,
+				F785A0F62AAF5468009F3D09 /* NewTableViewScreen */,
+				F785A0E62AAE028B009F3D09 /* NewCollectionScreen */,
+				17A3222D2AAB2AC200A155D6 /* CollectionScreen */,
+				17A322212AAB0F6400A155D6 /* TableViewScreen */,
+				178C70042AA5EA3B0038FA24 /* MainScreen */,
+				F7A8FA0D2AA669FE00933335 /* SecondScreen */,
+				178C70032AA5EA210038FA24 /* LaunchScreen */,
+			);
+			path = "OLD ";
+			sourceTree = "<group>";
+		};
+		F7E62AD62ACEB15800A7E485 /* NEW */ = {
+			isa = PBXGroup;
+			children = (
+				F7E746EF2AD43732004589ED /* ScreenMirrorScreen */,
+				F7E62AD92ACEB18500A7E485 /* PlusMainScreen */,
+			);
+			path = NEW;
+			sourceTree = "<group>";
+		};
+		F7E62AD92ACEB18500A7E485 /* PlusMainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F7E62ADE2ACEB9DB00A7E485 /* Model */,
+				F7E62ADA2ACEB19300A7E485 /* View */,
+			);
+			path = PlusMainScreen;
+			sourceTree = "<group>";
+		};
+		F7E62ADA2ACEB19300A7E485 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7E62ADF2ACEB9F300A7E485 /* PlusMainCellTableViewCell.swift */,
+				F7E62AD72ACEB18000A7E485 /* PlusMainScreenViewController.swift */,
+				F7E62ADB2ACEB1A700A7E485 /* PlusMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7E62ADE2ACEB9DB00A7E485 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7E62AE22ACEBA3800A7E485 /* PlusMainCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7E746EF2AD43732004589ED /* ScreenMirrorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F7E746F02AD43751004589ED /* ScreenMirrorViewController.swift */,
+				F7E746F32AD4376E004589ED /* ScreenMirrorView.swift */,
+			);
+			path = ScreenMirrorScreen;
+			sourceTree = "<group>";
+		};
+		F7FB37C82ACA9F0C005C9535 /* TVScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F7FB37CA2ACA9F23005C9535 /* Model */,
+				F7FB37C92ACA9F20005C9535 /* View */,
+			);
+			path = TVScreen;
+			sourceTree = "<group>";
+		};
+		F7FB37C92ACA9F20005C9535 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7FB37CB2ACA9F37005C9535 /* TVMainViewController.swift */,
+				F7FB37CD2ACA9F5C005C9535 /* TVMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7FB37CA2ACA9F23005C9535 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -763,6 +862,7 @@
 				17A322302AAB2AF700A155D6 /* CollectionViewController.swift in Sources */,
 				F7A8FA132AA709BC00933335 /* SecondView.swift in Sources */,
 				F7A8FA112AA709B000933335 /* SecondViewController.swift in Sources */,
+				F7E62ADC2ACEB1A700A7E485 /* PlusMainView.swift in Sources */,
 				F785A0EE2AAE07C4009F3D09 /* NewCollectionViewController.swift in Sources */,
 				F785A1012AAF54D8009F3D09 /* TableViewModel.swift in Sources */,
 				F785A1252AB4B466009F3D09 /* AdBlockListViewController.swift in Sources */,
@@ -773,6 +873,8 @@
 				F785A1342AB5F150009F3D09 /* VoiceRecViewController.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
 				F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */,
+				F7FB37CE2ACA9F5C005C9535 /* TVMainView.swift in Sources */,
+				F7FB37D02ACAA01E005C9535 /* ConnectButton.swift in Sources */,
 				F785A1322AB5F13A009F3D09 /* CallRecViewController.swift in Sources */,
 				F785A1032AAF723B009F3D09 /* HeaderView.swift in Sources */,
 				F7135A432ABB0FC400B7D1A2 /* RulesCell.swift in Sources */,
@@ -788,6 +890,7 @@
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
 				F785A14A2AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift in Sources */,
+				F7E746F42AD4376E004589ED /* ScreenMirrorView.swift in Sources */,
 				F785A13A2AB6E028009F3D09 /* RulesMainTableViewCell.swift in Sources */,
 				F785A10D2AB339A9009F3D09 /* BlockView.swift in Sources */,
 				F785A0FF2AAF54C9009F3D09 /* NewTableViewCell.swift in Sources */,
@@ -797,18 +900,23 @@
 				F785A1542AB9D7CC009F3D09 /* SiteModel.swift in Sources */,
 				178C6FEA2AA5E76F0038FA24 /* AppDelegate.swift in Sources */,
 				178C6FEC2AA5E76F0038FA24 /* SceneDelegate.swift in Sources */,
+				F7E746F12AD43751004589ED /* ScreenMirrorViewController.swift in Sources */,
 				F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */,
 				17A322242AAB0F7500A155D6 /* TableViewScreen.swift in Sources */,
 				F785A12B2AB4B4A2009F3D09 /* AdBlockRulesViewController.swift in Sources */,
 				F785A10B2AB33997009F3D09 /* BlockCell.swift in Sources */,
 				F785A1232AB4B43F009F3D09 /* AdBlockMainView.swift in Sources */,
 				F785A1382AB5F9E7009F3D09 /* AdBlockNavigationController.swift in Sources */,
+				F7E62AD82ACEB18000A7E485 /* PlusMainScreenViewController.swift in Sources */,
 				F785A1082AB33972009F3D09 /* BlockViewController.swift in Sources */,
 				17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */,
 				F785A0FA2AAF5498009F3D09 /* NewTableViewViewController.swift in Sources */,
+				F7FB37CC2ACA9F37005C9535 /* TVMainViewController.swift in Sources */,
 				F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */,
+				F7E62AE32ACEBA3800A7E485 /* PlusMainCellModel.swift in Sources */,
 				F785A1292AB4B493009F3D09 /* AdBlockRulesView.swift in Sources */,
 				F785A1202AB4B421009F3D09 /* AdBlockMainViewController.swift in Sources */,
+				F7E62AE02ACEB9F300A7E485 /* PlusMainCellTableViewCell.swift in Sources */,
 				F785A10F2AB339D5009F3D09 /* BlockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

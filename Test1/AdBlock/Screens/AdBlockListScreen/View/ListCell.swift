@@ -84,10 +84,12 @@ class ListCell: UITableViewCell {
         
         layoutSubviews()
         contentView.addSubview(containerView)
-        containerView.addSubview(vStack)
+      
         addSubview(deleteButton)
-        containerView.addSubview(globeImage)
         
+        containerView.addSubview(globeImage)
+        containerView.addSubview(vStack)
+        containerView.clipsToBounds = true  
         self.selectionStyle = .none
         
         containerView.snp.makeConstraints {
