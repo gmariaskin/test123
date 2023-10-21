@@ -10,7 +10,6 @@ import UIKit
 class PlusMainScreenViewController: UIViewController {
     
     //MARK: - Properties
-    
     private let mainView = PlusMainView()
     
     //MARK: - Lifecycle
