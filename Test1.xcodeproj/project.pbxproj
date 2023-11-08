@@ -32,6 +32,8 @@
 		C3249B0A3CBD6D5FDF79032F /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */; };
 		F7135A432ABB0FC400B7D1A2 /* RulesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7135A422ABB0FC400B7D1A2 /* RulesCell.swift */; };
 		F7135A462ABB107300B7D1A2 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7135A452ABB107300B7D1A2 /* RuleModel.swift */; };
+		F751CFF82AFBF36D0052D2EC /* NewDrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F751CFF72AFBF36D0052D2EC /* NewDrawViewController.swift */; };
+		F751CFFA2AFBF3C40052D2EC /* NewDrawView .swift in Sources */ = {isa = PBXBuildFile; fileRef = F751CFF92AFBF3C40052D2EC /* NewDrawView .swift */; };
 		F785A0EA2AAE04E5009F3D09 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0E92AAE04E5009F3D09 /* CollectionViewModel.swift */; };
 		F785A0EC2AAE07AC009F3D09 /* NewCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */; };
 		F785A0EE2AAE07C4009F3D09 /* NewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */; };
@@ -108,6 +110,8 @@
 		F0E8619F604E83CC1AA72494 /* Pods-Test1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.debug.xcconfig"; path = "Target Support Files/Pods-Test1/Pods-Test1.debug.xcconfig"; sourceTree = "<group>"; };
 		F7135A422ABB0FC400B7D1A2 /* RulesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesCell.swift; sourceTree = "<group>"; };
 		F7135A452ABB107300B7D1A2 /* RuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleModel.swift; sourceTree = "<group>"; };
+		F751CFF72AFBF36D0052D2EC /* NewDrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDrawViewController.swift; sourceTree = "<group>"; };
+		F751CFF92AFBF3C40052D2EC /* NewDrawView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewDrawView .swift"; sourceTree = "<group>"; };
 		F785A0E92AAE04E5009F3D09 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		F785A0EB2AAE07AC009F3D09 /* NewCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionView.swift; sourceTree = "<group>"; };
 		F785A0ED2AAE07C4009F3D09 /* NewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		178C6FFE2AA5E8D80038FA24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F751CFF52AFBF34C0052D2EC /* NewDrawScreen */,
 				17F2AAF12AFB96A900EB1A8D /* DrawScreen */,
 				175641E72AE3CA9A0081BF47 /* NetworkScreen */,
 				F7E62AD62ACEB15800A7E485 /* NEW */,
@@ -427,6 +432,23 @@
 				1403674658DA0BC849EF67E8 /* Pods-Test1.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F751CFF52AFBF34C0052D2EC /* NewDrawScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F751CFF62AFBF35A0052D2EC /* View */,
+			);
+			path = NewDrawScreen;
+			sourceTree = "<group>";
+		};
+		F751CFF62AFBF35A0052D2EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F751CFF72AFBF36D0052D2EC /* NewDrawViewController.swift */,
+				F751CFF92AFBF3C40052D2EC /* NewDrawView .swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F785A0E62AAE028B009F3D09 /* NewCollectionScreen */ = {
@@ -924,6 +946,7 @@
 				F7E62ADC2ACEB1A700A7E485 /* PlusMainView.swift in Sources */,
 				F785A0EE2AAE07C4009F3D09 /* NewCollectionViewController.swift in Sources */,
 				F785A1012AAF54D8009F3D09 /* TableViewModel.swift in Sources */,
+				F751CFF82AFBF36D0052D2EC /* NewDrawViewController.swift in Sources */,
 				F785A1252AB4B466009F3D09 /* AdBlockListViewController.swift in Sources */,
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
 				17F2AAF42AFB96BB00EB1A8D /* DrawViewController.swift in Sources */,
@@ -949,6 +972,7 @@
 				F785A0FC2AAF54AC009F3D09 /* NewTableView.swift in Sources */,
 				175641F12AE3D0AF0081BF47 /* NetworkLayer.swift in Sources */,
 				F785A14D2AB8AF7E009F3D09 /* CustomRuleView.swift in Sources */,
+				F751CFFA2AFBF3C40052D2EC /* NewDrawView .swift in Sources */,
 				178C70072AA5EA4D0038FA24 /* MainView.swift in Sources */,
 				178C700B2AA5F4250038FA24 /* MainScreenModel.swift in Sources */,
 				F785A14A2AB87EC9009F3D09 /* AdBlockCustomFeatureView.swift in Sources */,

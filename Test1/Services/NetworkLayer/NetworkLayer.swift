@@ -52,6 +52,7 @@ class NetworkLayer: NetworkLayerProtocol {
 }
 
 class NetworkService {
+    
     func fetchDataAsync<T: Decodable>(from url: URL, modelType: T.Type) async throws -> [T] {
         let (data, response) = try await URLSession.shared.data(from: url)
         guard let httpResponse = response as? HTTPURLResponse,
