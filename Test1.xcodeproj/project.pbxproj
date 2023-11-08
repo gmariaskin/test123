@@ -26,6 +26,9 @@
 		17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322322AAB33FA00A155D6 /* CustomCollectionViewCell.swift */; };
 		17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322342AAB349F00A155D6 /* MyCollectionView.swift */; };
 		17A322372AAB355600A155D6 /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A322362AAB355600A155D6 /* MyTableView.swift */; };
+		17F2AAF42AFB96BB00EB1A8D /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F2AAF32AFB96BB00EB1A8D /* DrawViewController.swift */; };
+		17F2AAF62AFB97E300EB1A8D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F2AAF52AFB97E300EB1A8D /* MessageView.swift */; };
+		17F2AAF92AFBA13200EB1A8D /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F2AAF82AFBA13200EB1A8D /* ChartView.swift */; };
 		C3249B0A3CBD6D5FDF79032F /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */; };
 		F7135A432ABB0FC400B7D1A2 /* RulesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7135A422ABB0FC400B7D1A2 /* RulesCell.swift */; };
 		F7135A462ABB107300B7D1A2 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7135A452ABB107300B7D1A2 /* RuleModel.swift */; };
@@ -98,6 +101,9 @@
 		17A322322AAB33FA00A155D6 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		17A322342AAB349F00A155D6 /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
 		17A322362AAB355600A155D6 /* MyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
+		17F2AAF32AFB96BB00EB1A8D /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		17F2AAF52AFB97E300EB1A8D /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		17F2AAF82AFBA13200EB1A8D /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		389334B8C1CAEA2B9EA9A71F /* Pods_Test1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E8619F604E83CC1AA72494 /* Pods-Test1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.debug.xcconfig"; path = "Target Support Files/Pods-Test1/Pods-Test1.debug.xcconfig"; sourceTree = "<group>"; };
 		F7135A422ABB0FC400B7D1A2 /* RulesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesCell.swift; sourceTree = "<group>"; };
@@ -231,6 +237,7 @@
 		178C6FFE2AA5E8D80038FA24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				17F2AAF12AFB96A900EB1A8D /* DrawScreen */,
 				175641E72AE3CA9A0081BF47 /* NetworkScreen */,
 				F7E62AD62ACEB15800A7E485 /* NEW */,
 				F7E62AD52ACEB14700A7E485 /* OLD  */,
@@ -385,6 +392,24 @@
 				17A322322AAB33FA00A155D6 /* CustomCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		17F2AAF12AFB96A900EB1A8D /* DrawScreen */ = {
+			isa = PBXGroup;
+			children = (
+				17F2AAF22AFB96B200EB1A8D /* View */,
+			);
+			path = DrawScreen;
+			sourceTree = "<group>";
+		};
+		17F2AAF22AFB96B200EB1A8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17F2AAF32AFB96BB00EB1A8D /* DrawViewController.swift */,
+				17F2AAF52AFB97E300EB1A8D /* MessageView.swift */,
+				17F2AAF82AFBA13200EB1A8D /* ChartView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CC7FA20BF1C0D926DC86DFB2 /* Frameworks */ = {
@@ -901,9 +926,11 @@
 				F785A1012AAF54D8009F3D09 /* TableViewModel.swift in Sources */,
 				F785A1252AB4B466009F3D09 /* AdBlockListViewController.swift in Sources */,
 				17A322332AAB33FA00A155D6 /* CustomCollectionViewCell.swift in Sources */,
+				17F2AAF42AFB96BB00EB1A8D /* DrawViewController.swift in Sources */,
 				F785A1272AB4B47A009F3D09 /* AdBlockListView.swift in Sources */,
 				F785A1442AB7356D009F3D09 /* AdBlockGuideView.swift in Sources */,
 				F7135A462ABB107300B7D1A2 /* RuleModel.swift in Sources */,
+				17F2AAF62AFB97E300EB1A8D /* MessageView.swift in Sources */,
 				F785A1342AB5F150009F3D09 /* VoiceRecViewController.swift in Sources */,
 				17A3222A2AAB1EBD00A155D6 /* PersonModel.swift in Sources */,
 				F785A1112AB34D89009F3D09 /* BlockHeader.swift in Sources */,
@@ -946,6 +973,7 @@
 				F7E62AD82ACEB18000A7E485 /* PlusMainScreenViewController.swift in Sources */,
 				F785A1082AB33972009F3D09 /* BlockViewController.swift in Sources */,
 				17A322352AAB349F00A155D6 /* MyCollectionView.swift in Sources */,
+				17F2AAF92AFBA13200EB1A8D /* ChartView.swift in Sources */,
 				F785A0FA2AAF5498009F3D09 /* NewTableViewViewController.swift in Sources */,
 				F7FB37CC2ACA9F37005C9535 /* TVMainViewController.swift in Sources */,
 				F7A8FA152AA70A3800933335 /* SecondScreenModel.swift in Sources */,
